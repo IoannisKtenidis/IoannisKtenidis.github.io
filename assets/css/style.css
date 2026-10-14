@@ -1,0 +1,101 @@
+/* Custom styles for Ioannis Ktenidis Portfolio Website */
+
+:root {
+  --primary: #0284c7;
+  --primary-dark: #0369a1;
+  --accent: #38bdf8;
+  --sidebar-width: 280px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Sidebar Nav item active style */
+.nav-link {
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.nav-link.active {
+  background: rgba(2, 132, 199, 0.15);
+  color: #38bdf8;
+  border-left: 3px solid #38bdf8;
+  font-weight: 600;
+}
+
+.nav-link:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f1f5f9;
+}
+
+/* Glassmorphism card utility */
+.glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 12px 24px -10px rgba(2, 132, 199, 0.25);
+}
+
+/* Tech grid background pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Hero gradient glow */
+.hero-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(2, 132, 199, 0.18) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+/* Timeline line */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: -29px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #38bdf8;
+  border: 2px solid #0f172a;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
+}
+
+@media (max-width: 768px) {
+  .timeline-item::before {
+    left: -21px;
+  }
+}
