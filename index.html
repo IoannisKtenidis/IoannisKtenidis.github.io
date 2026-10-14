@@ -57,19 +57,18 @@
            ======================================================== -->
       <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
         <div>
-          <!-- Avatar + Status -->
+          <!-- Avatar + Status (Updated with Ioannis's conference photo) -->
           <div class="flex items-center gap-4 mb-6">
             <div class="relative">
               <img 
                 src="assets/images/avatar.jpg" 
-                onerror="this.src='https://avatars.githubusercontent.com/u/185906519?v=4'" 
                 alt="Ioannis Ktenidis" 
-                class="w-16 h-16 rounded-full object-cover border-2 border-slate-700/80 shadow-md">
-              <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-teal-400 border-2 border-slate-900 rounded-full" title="Active"></span>
+                class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-slate-700/90 shadow-lg shadow-teal-500/10">
+              <span class="absolute bottom-1 right-1 w-4 h-4 bg-teal-400 border-2 border-slate-900 rounded-full" title="Active & Available"></span>
             </div>
             <div>
               <div class="text-xs uppercase tracking-widest text-teal-300 font-semibold">Available for Projects</div>
-              <div class="text-xs text-slate-500">Kozani / Thessaloniki, Greece</div>
+              <div class="text-xs text-slate-400 mt-0.5">Kozani / Thessaloniki, Greece</div>
             </div>
           </div>
 
@@ -305,7 +304,7 @@
         </section>
 
         <!-- ====================================================
-             RESEARCH PROJECTS SECTION (SECASSURED, TORNADO, ASKOS, AI4CYBER)
+             RESEARCH PROJECTS SECTION (With Uniform Square Project Icons)
              ==================================================== -->
         <section id="research-projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Research Projects">
           <!-- Mobile Sticky Header -->
@@ -317,12 +316,12 @@
 
             <!-- Research Project 1: SECASSURED -->
             <li class="mb-12 group/item">
-              <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+              <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-teal-300 sm:col-span-2">
-                  Horizon Europe
-                </header>
-                <div class="z-10 sm:col-span-6">
+                
+                <!-- Main Content -->
+                <div class="z-10 sm:order-2 sm:col-span-6">
+                  <div class="text-xs uppercase tracking-wide text-teal-300 font-semibold mb-1">Horizon Europe</div>
                   <h3 class="font-medium leading-snug text-slate-200">
                     <div>
                       <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href="https://secassured.eu/" target="_blank" rel="noreferrer noopener" aria-label="SECASSURED Horizon Europe">
@@ -345,17 +344,24 @@
                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Horizon Europe</div></li>
                   </ul>
                 </div>
+
+                <!-- Uniform Square Project Icon -->
+                <div class="z-10 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                  <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-white flex items-center justify-center p-2.5 border border-slate-700/60 shadow-md transition group-hover:border-teal-300/50 group-hover:shadow-teal-500/10">
+                    <img src="assets/images/secassured.jpg" alt="SECASSURED Logo" class="w-full h-full object-contain">
+                  </div>
+                </div>
               </div>
             </li>
 
             <!-- Research Project 2: TORNADO -->
             <li class="mb-12 group/item">
-              <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+              <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-teal-300 sm:col-span-2">
-                  Horizon Europe
-                </header>
-                <div class="z-10 sm:col-span-6">
+                
+                <!-- Main Content -->
+                <div class="z-10 sm:order-2 sm:col-span-6">
+                  <div class="text-xs uppercase tracking-wide text-teal-300 font-semibold mb-1">Horizon Europe</div>
                   <h3 class="font-medium leading-snug text-slate-200">
                     <div>
                       <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href="https://tornado-horizon.eu/about/" target="_blank" rel="noreferrer noopener" aria-label="TORNADO Horizon Europe">
@@ -377,17 +383,24 @@
                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Deep Learning</div></li>
                   </ul>
                 </div>
+
+                <!-- Uniform Square Project Icon -->
+                <div class="z-10 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                  <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-white flex items-center justify-center p-2.5 border border-slate-700/60 shadow-md transition group-hover:border-teal-300/50 group-hover:shadow-teal-500/10">
+                    <img src="assets/images/tornado.png" alt="TORNADO Logo" class="w-full h-full object-contain">
+                  </div>
+                </div>
               </div>
             </li>
 
             <!-- Research Project 3: ASKOS -->
             <li class="mb-12 group/item">
-              <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+              <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-teal-300 sm:col-span-2">
-                  NRRP Greece
-                </header>
-                <div class="z-10 sm:col-span-6">
+                
+                <!-- Main Content -->
+                <div class="z-10 sm:order-2 sm:col-span-6">
+                  <div class="text-xs uppercase tracking-wide text-teal-300 font-semibold mb-1">NRRP Greece</div>
                   <h3 class="font-medium leading-snug text-slate-200">
                     <div>
                       <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href="https://askos-project.gr/" target="_blank" rel="noreferrer noopener" aria-label="ASKOS National Project">
@@ -409,17 +422,24 @@
                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Security Architecture</div></li>
                   </ul>
                 </div>
+
+                <!-- Uniform Square Project Icon -->
+                <div class="z-10 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                  <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-white flex items-center justify-center p-2.5 border border-slate-700/60 shadow-md transition group-hover:border-teal-300/50 group-hover:shadow-teal-500/10">
+                    <img src="assets/images/askos.jpg" alt="ASKOS Logo" class="w-full h-full object-contain">
+                  </div>
+                </div>
               </div>
             </li>
 
             <!-- Research Project 4: AI4CYBER -->
             <li class="mb-12 group/item">
-              <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+              <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-teal-300 sm:col-span-2">
-                  Horizon 2020
-                </header>
-                <div class="z-10 sm:col-span-6">
+                
+                <!-- Main Content -->
+                <div class="z-10 sm:order-2 sm:col-span-6">
+                  <div class="text-xs uppercase tracking-wide text-teal-300 font-semibold mb-1">Horizon 2020</div>
                   <h3 class="font-medium leading-snug text-slate-200">
                     <div>
                       <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href="https://ai4cyber.eu/" target="_blank" rel="noreferrer noopener" aria-label="AI4CYBER Horizon 2020">
@@ -440,6 +460,13 @@
                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Vulnerability Testing</div></li>
                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Horizon 2020</div></li>
                   </ul>
+                </div>
+
+                <!-- Uniform Square Project Icon -->
+                <div class="z-10 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                  <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-white flex items-center justify-center p-2.5 border border-slate-700/60 shadow-md transition group-hover:border-teal-300/50 group-hover:shadow-teal-500/10">
+                    <img src="assets/images/ai4cyber.png" alt="AI4CYBER Logo" class="w-full h-full object-contain">
+                  </div>
                 </div>
               </div>
             </li>
@@ -570,7 +597,7 @@
         </section>
 
         <!-- ====================================================
-             PROJECTS SECTION (GitHub Open-Source Code)
+             PROJECTS SECTION (GitHub Open-Source Code with Square Badges)
              ==================================================== -->
         <section id="projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected projects">
           <!-- Mobile Sticky Header -->
@@ -603,8 +630,11 @@
                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Docker</div></li>
                   </ul>
                 </div>
-                <div class="sm:order-1 sm:col-span-2 text-slate-500 font-mono text-xs flex sm:flex-col items-center sm:items-start justify-center gap-1.5 pt-1">
-                  <span class="flex items-center gap-1"><i class="fa-solid fa-code text-teal-300/80"></i> MLOps</span>
+                <div class="z-10 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                  <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-slate-800/80 flex flex-col items-center justify-center p-2.5 border border-slate-700/60 shadow-md group-hover:border-teal-300/40 text-center">
+                    <i class="fa-solid fa-bolt-lightning text-2xl text-teal-300 mb-1"></i>
+                    <span class="text-[10px] font-mono text-slate-400">EV MLOps</span>
+                  </div>
                 </div>
               </div>
             </li>
@@ -628,11 +658,14 @@
                   <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">PyTorch</div></li>
                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">LogBERT</div></li>
-                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Docker Compose</div></li>
+                    <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Docker</div></li>
                   </ul>
                 </div>
-                <div class="sm:order-1 sm:col-span-2 text-slate-500 font-mono text-xs flex sm:flex-col items-center sm:items-start justify-center gap-1.5 pt-1">
-                  <span class="flex items-center gap-1"><i class="fa-solid fa-microchip text-teal-300/80"></i> LogBERT</span>
+                <div class="z-10 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                  <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-slate-800/80 flex flex-col items-center justify-center p-2.5 border border-slate-700/60 shadow-md group-hover:border-teal-300/40 text-center">
+                    <i class="fa-solid fa-microchip text-2xl text-teal-300 mb-1"></i>
+                    <span class="text-[10px] font-mono text-slate-400">LogBERT</span>
+                  </div>
                 </div>
               </div>
             </li>
@@ -658,8 +691,11 @@
                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Security</div></li>
                   </ul>
                 </div>
-                <div class="sm:order-1 sm:col-span-2 text-slate-500 font-mono text-xs flex sm:flex-col items-center sm:items-start justify-center gap-1.5 pt-1">
-                  <span class="flex items-center gap-1"><i class="fa-solid fa-shield-virus text-teal-300/80"></i> Defense</span>
+                <div class="z-10 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                  <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-slate-800/80 flex flex-col items-center justify-center p-2.5 border border-slate-700/60 shadow-md group-hover:border-teal-300/40 text-center">
+                    <i class="fa-solid fa-shield-virus text-2xl text-teal-300 mb-1"></i>
+                    <span class="text-[10px] font-mono text-slate-400">FedDefense</span>
+                  </div>
                 </div>
               </div>
             </li>
@@ -685,8 +721,11 @@
                     <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">SpaCy</div></li>
                   </ul>
                 </div>
-                <div class="sm:order-1 sm:col-span-2 text-slate-500 font-mono text-xs flex sm:flex-col items-center sm:items-start justify-center gap-1.5 pt-1">
-                  <span class="flex items-center gap-1"><i class="fa-solid fa-user-shield text-teal-300/80"></i> Privacy</span>
+                <div class="z-10 sm:order-1 sm:col-span-2 sm:translate-y-1">
+                  <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-slate-800/80 flex flex-col items-center justify-center p-2.5 border border-slate-700/60 shadow-md group-hover:border-teal-300/40 text-center">
+                    <i class="fa-solid fa-user-shield text-2xl text-teal-300 mb-1"></i>
+                    <span class="text-[10px] font-mono text-slate-400">IoTPrivacy</span>
+                  </div>
                 </div>
               </div>
             </li>
