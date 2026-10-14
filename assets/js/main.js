@@ -1,26 +1,38 @@
 /**
- * Ioannis Ktenidis - Personal Website & GitHub Profile Portfolio
+ * Ioannis Ktenidis - Minimal & Futuristic Portfolio (Brittany Chiang inspired)
  * Main JavaScript Controller
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initNavigation();
-  initMobileMenu();
-  initProjectFilters();
+  initMouseSpotlight();
+  initScrollSpy();
   fetchLiveGitHubStats();
   updateCurrentYear();
 });
 
 /* ----------------------------------------------------
- * Navigation & ScrollSpy (IntersectionObserver)
+ * Interactive Mouse Spotlight Glow
  * ---------------------------------------------------- */
-function initNavigation() {
+function initMouseSpotlight() {
+  const spotlight = document.getElementById('mouse-spotlight');
+  if (!spotlight) return;
+
+  window.addEventListener('mousemove', (e) => {
+    document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+    document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+  });
+}
+
+/* ----------------------------------------------------
+ * ScrollSpy Navigation with Expanding Indicator Line
+ * ---------------------------------------------------- */
+function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navItems = document.querySelectorAll('.nav-item');
 
   const observerOptions = {
     root: null,
-    rootMargin: '-20% 0px -60% 0px',
+    rootMargin: '-20% 0px -70% 0px',
     threshold: 0
   };
 
@@ -28,11 +40,11 @@ function initNavigation() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
-        navLinks.forEach(link => {
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
+        navItems.forEach(item => {
+          if (item.getAttribute('href') === `#${id}`) {
+            item.classList.add('active');
           } else {
-            link.classList.remove('active');
+            item.classList.remove('active');
           }
         });
       }
@@ -43,74 +55,7 @@ function initNavigation() {
 }
 
 /* ----------------------------------------------------
- * Mobile Sidebar Drawer Toggle
- * ---------------------------------------------------- */
-function initMobileMenu() {
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const closeBtn = document.getElementById('close-mobile-menu-btn');
-  const mobileSidebar = document.getElementById('mobile-sidebar');
-  const mobileBackdrop = document.getElementById('mobile-backdrop');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-  function openMenu() {
-    mobileSidebar.classList.remove('-translate-x-full');
-    mobileBackdrop.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
-  }
-
-  function closeMenu() {
-    mobileSidebar.classList.add('-translate-x-full');
-    mobileBackdrop.classList.add('hidden');
-    document.body.classList.remove('overflow-hidden');
-  }
-
-  if (menuBtn) menuBtn.addEventListener('click', openMenu);
-  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-  if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMenu);
-
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-}
-
-/* ----------------------------------------------------
- * Project Category Filter
- * ---------------------------------------------------- */
-function initProjectFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
-
-      // Update button styles for clean high-contrast light theme
-      filterBtns.forEach(b => {
-        b.classList.remove('bg-blue-700', 'text-white', 'shadow-sm');
-        b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-300', 'hover:bg-slate-50');
-      });
-      btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-300', 'hover:bg-slate-50');
-      btn.classList.add('bg-blue-700', 'text-white', 'shadow-sm');
-
-      // Filter cards
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category') || '';
-        if (filter === 'all' || category.includes(filter)) {
-          card.classList.remove('hidden');
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 30);
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    });
-  });
-}
-
-/* ----------------------------------------------------
- * GitHub Live API Sync (Stars, Forks, Updates)
+ * Live GitHub API Sync
  * ---------------------------------------------------- */
 async function fetchLiveGitHubStats() {
   const username = 'IoannisKtenidis';
@@ -122,7 +67,6 @@ async function fetchLiveGitHubStats() {
     const repoMap = new Map();
     repos.forEach(repo => repoMap.set(repo.name.toLowerCase(), repo));
 
-    // Update dynamically on cards with data-repo-name
     document.querySelectorAll('[data-repo-name]').forEach(card => {
       const repoName = card.getAttribute('data-repo-name').toLowerCase();
       const repo = repoMap.get(repoName);
@@ -133,19 +77,13 @@ async function fetchLiveGitHubStats() {
         if (forksEl) forksEl.textContent = repo.forks_count;
       }
     });
-
-    // Update total repo count badge if present
-    const totalReposEl = document.getElementById('github-total-repos');
-    if (totalReposEl) {
-      totalReposEl.textContent = repos.length;
-    }
   } catch (error) {
-    console.warn('GitHub API fetch bypassed (offline or rate limited):', error);
+    console.warn('GitHub API offline / rate limited:', error);
   }
 }
 
 /* ----------------------------------------------------
- * Update Current Year
+ * Update Year
  * ---------------------------------------------------- */
 function updateCurrentYear() {
   const yearEl = document.getElementById('current-year');
