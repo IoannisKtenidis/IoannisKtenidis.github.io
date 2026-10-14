@@ -1,86 +1,94 @@
-/* Custom styles for Ioannis Ktenidis Portfolio Website */
+/* Refined Professional Editorial & Clean Sans/Serif Theme for Ioannis Ktenidis */
 
 :root {
-  --primary: #0284c7;
-  --primary-dark: #0369a1;
-  --accent: #38bdf8;
-  --sidebar-width: 280px;
+  --primary: #1D4ED8;       /* Navy Blue */
+  --primary-dark: #1E40AF;  /* Deep Navy */
+  --text-main: #1E293B;     /* Deep Charcoal / Dark Slate */
+  --text-muted: #475569;    /* Refined Slate */
+  --bg-main: #F8F9FA;       /* Clean Off-White */
+  --bg-card: #FFFFFF;       /* Pure White */
+  --border-color: #E2E8F0;  /* Soft Border */
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 1.5rem;
+  scroll-padding-top: 2rem;
+  font-size: 16px;
 }
 
-/* Custom Scrollbar */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  line-height: 1.6;
+}
+
+/* Serif Headings */
+h1, h2, h3, .font-editorial {
+  font-family: 'Lora', 'Playfair Display', Georgia, serif;
+}
+
+/* Custom Scrollbar - Clean Neutral */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #94A3B8;
 }
 
-/* Sidebar Nav item active style */
+/* Navigation active item */
 .nav-link {
   position: relative;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
+  color: #475569;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  background-color: #F8FAFC;
 }
 
 .nav-link.active {
-  background: rgba(2, 132, 199, 0.15);
-  color: #38bdf8;
-  border-left: 3px solid #38bdf8;
+  background-color: #EFF6FF;
+  color: var(--primary);
+  border-left: 3px solid var(--primary);
   font-weight: 600;
 }
 
-.nav-link:hover:not(.active) {
-  background: rgba(255, 255, 255, 0.05);
-  color: #f1f5f9;
+/* White Card with Subtle Border and Shadow */
+.editorial-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-/* Glassmorphism card utility */
-.glass-card {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.editorial-card-hover:hover {
+  transform: translateY(-3px);
+  border-color: #93C5FD;
+  box-shadow: 0 10px 20px -5px rgba(29, 78, 216, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
 }
 
-.glass-card-hover {
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
-}
-
-.glass-card-hover:hover {
-  transform: translateY(-4px);
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 12px 24px -10px rgba(2, 132, 199, 0.25);
-}
-
-/* Tech grid background pattern */
-.bg-grid-pattern {
-  background-size: 40px 40px;
+/* Subtle Geometric Grid Background Pattern */
+.bg-subtle-grid {
+  background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
 }
 
-/* Hero gradient glow */
-.hero-glow {
-  background: radial-gradient(circle at 50% 30%, rgba(2, 132, 199, 0.18) 0%, rgba(15, 23, 42, 0) 70%);
-}
-
-/* Timeline line */
+/* Timeline Styling */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -89,9 +97,9 @@ html {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #38bdf8;
-  border: 2px solid #0f172a;
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
+  background: var(--primary);
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.25);
 }
 
 @media (max-width: 768px) {

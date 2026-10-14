@@ -84,13 +84,13 @@ function initProjectFilters() {
     btn.addEventListener('click', () => {
       const filter = btn.getAttribute('data-filter');
 
-      // Update button styles
+      // Update button styles for clean high-contrast light theme
       filterBtns.forEach(b => {
-        b.classList.remove('bg-sky-500', 'text-white', 'shadow-md');
-        b.classList.add('bg-slate-800', 'text-slate-300', 'hover:bg-slate-700');
+        b.classList.remove('bg-blue-700', 'text-white', 'shadow-sm');
+        b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-300', 'hover:bg-slate-50');
       });
-      btn.classList.remove('bg-slate-800', 'text-slate-300', 'hover:bg-slate-700');
-      btn.classList.add('bg-sky-500', 'text-white', 'shadow-md');
+      btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-300', 'hover:bg-slate-50');
+      btn.classList.add('bg-blue-700', 'text-white', 'shadow-sm');
 
       // Filter cards
       projectCards.forEach(card => {
@@ -100,7 +100,7 @@ function initProjectFilters() {
           setTimeout(() => {
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-          }, 50);
+          }, 30);
         } else {
           card.classList.add('hidden');
         }

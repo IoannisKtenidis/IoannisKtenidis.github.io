@@ -17,250 +17,260 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
             brand: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              900: '#0c4a6e',
+              50: '#eff6ff',
+              100: '#dbeafe',
+              600: '#2563eb',
+              700: '#1d4ed8', // Anchor Navy Blue
+              800: '#1e40af', // Deep Navy
+              900: '#1e3a8a',
+            },
+            slate: {
+              850: '#151f32',
+              900: '#0f172a',
             }
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Lora', 'Playfair Display', 'Georgia', 'serif'],
           }
         }
       }
     }
   </script>
 
-  <!-- Google Fonts & Font Awesome Icons -->
+  <!-- Google Fonts: Inter (Sans-Serif) & Lora / Playfair Display (Refined Editorial Serif) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Custom CSS -->
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+<body class="bg-[#F8F9FA] text-[#1E293B] font-sans text-base leading-[1.65] antialiased selection:bg-blue-600 selection:text-white">
 
   <!-- ========================================================
-       DESKTOP FIXED LEFT SIDEBAR (Inspired by pradoglougrammatikis.com)
+       DESKTOP FIXED LEFT SIDEBAR (High-Contrast Clean White)
        ======================================================== -->
-  <aside class="fixed left-0 top-0 bottom-0 h-screen w-72 bg-slate-900 border-r border-slate-800/80 hidden md:flex flex-col justify-between overflow-y-auto z-40 transition-all">
+  <aside class="fixed left-0 top-0 bottom-0 h-screen w-72 bg-white border-r border-slate-200 hidden md:flex flex-col justify-between overflow-y-auto z-40 transition-all shadow-[1px_0_4px_rgba(0,0,0,0.02)]">
     
     <!-- Profile Header / Logo Area -->
-    <div class="p-6 text-center border-b border-slate-800/80">
+    <div class="p-6 text-center border-b border-slate-100">
       <div class="relative inline-block mb-3">
         <img 
           src="assets/images/avatar.jpg" 
           onerror="this.src='https://avatars.githubusercontent.com/u/185906519?v=4'" 
           alt="Ioannis Ktenidis" 
-          class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-sky-400/40 p-1 shadow-lg shadow-sky-500/10">
-        <span class="absolute bottom-1 right-1 w-4 h-4 bg-emerald-500 border-2 border-slate-900 rounded-full" title="Available for opportunities"></span>
+          class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-slate-200 p-0.5 shadow-sm">
+        <span class="absolute bottom-1 right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full shadow-sm" title="Available for opportunities"></span>
       </div>
-      <h1 class="text-xl font-bold tracking-tight text-white">Ioannis Ktenidis</h1>
-      <p class="text-xs text-sky-400 font-medium mt-1">Software Developer & AI Researcher</p>
-      <div class="mt-2 text-[11px] text-slate-400 bg-slate-800/60 py-1 px-2.5 rounded-full inline-block border border-slate-700/50">
-        <i class="fa-solid fa-location-dot text-sky-400 mr-1"></i> Greece
+      <h1 class="text-xl font-serif font-bold tracking-tight text-slate-900">Ioannis Ktenidis</h1>
+      <p class="text-xs text-blue-700 font-semibold tracking-wide mt-1 uppercase">Software Developer & AI Researcher</p>
+      <div class="mt-2.5 text-[11px] text-slate-600 bg-slate-50 py-1 px-3 rounded-full inline-flex items-center gap-1.5 border border-slate-200">
+        <i class="fa-solid fa-location-dot text-blue-700"></i> Greece
       </div>
     </div>
 
-    <!-- Navigation Menu (Home, About, Experience, Projects, Education, Skills, Contact) -->
+    <!-- Navigation Menu (Sans-Serif, High Legibility, 16px standard) -->
     <nav class="p-4 flex-1 space-y-1">
-      <a href="#home" class="nav-link active flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-slate-300 font-medium">
-        <i class="fa-solid fa-house w-5 text-center text-sky-400"></i>
+      <a href="#home" class="nav-link active flex items-center gap-3.5 px-4 py-2.5 rounded-lg text-sm font-medium">
+        <i class="fa-solid fa-house w-5 text-center text-blue-700"></i>
         <span>Home</span>
       </a>
-      <a href="#about" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-slate-300 font-medium">
-        <i class="fa-solid fa-user w-5 text-center text-sky-400"></i>
+      <a href="#about" class="nav-link flex items-center gap-3.5 px-4 py-2.5 rounded-lg text-sm font-medium">
+        <i class="fa-solid fa-user w-5 text-center text-blue-700"></i>
         <span>About</span>
       </a>
-      <a href="#experience" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-slate-300 font-medium">
-        <i class="fa-solid fa-briefcase w-5 text-center text-sky-400"></i>
+      <a href="#experience" class="nav-link flex items-center gap-3.5 px-4 py-2.5 rounded-lg text-sm font-medium">
+        <i class="fa-solid fa-briefcase w-5 text-center text-blue-700"></i>
         <span>Experience</span>
       </a>
-      <a href="#projects" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-slate-300 font-medium">
-        <i class="fa-solid fa-code w-5 text-center text-sky-400"></i>
+      <a href="#projects" class="nav-link flex items-center gap-3.5 px-4 py-2.5 rounded-lg text-sm font-medium">
+        <i class="fa-solid fa-code w-5 text-center text-blue-700"></i>
         <span>Projects & GitHub</span>
       </a>
-      <a href="#education" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-slate-300 font-medium">
-        <i class="fa-solid fa-graduation-cap w-5 text-center text-sky-400"></i>
+      <a href="#education" class="nav-link flex items-center gap-3.5 px-4 py-2.5 rounded-lg text-sm font-medium">
+        <i class="fa-solid fa-graduation-cap w-5 text-center text-blue-700"></i>
         <span>Education</span>
       </a>
-      <a href="#skills" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-slate-300 font-medium">
-        <i class="fa-solid fa-layer-group w-5 text-center text-sky-400"></i>
+      <a href="#skills" class="nav-link flex items-center gap-3.5 px-4 py-2.5 rounded-lg text-sm font-medium">
+        <i class="fa-solid fa-layer-group w-5 text-center text-blue-700"></i>
         <span>Skills</span>
       </a>
-      <a href="#contact" class="nav-link flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-slate-300 font-medium">
-        <i class="fa-solid fa-envelope w-5 text-center text-sky-400"></i>
+      <a href="#contact" class="nav-link flex items-center gap-3.5 px-4 py-2.5 rounded-lg text-sm font-medium">
+        <i class="fa-solid fa-envelope w-5 text-center text-blue-700"></i>
         <span>Contact</span>
       </a>
     </nav>
 
     <!-- Social Links & Footer in Sidebar -->
-    <div class="p-4 border-t border-slate-800/80 bg-slate-900/50">
-      <div class="flex items-center justify-center gap-3 text-slate-400">
-        <a href="https://github.com/IoannisKtenidis" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-colors" title="GitHub">
+    <div class="p-4 border-t border-slate-100 bg-slate-50/70">
+      <div class="flex items-center justify-center gap-2.5">
+        <a href="https://github.com/IoannisKtenidis" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-colors shadow-sm" title="GitHub">
           <i class="fa-brands fa-github text-sm"></i>
         </a>
-        <a href="https://www.linkedin.com/in/ioannis-ktenidis/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-colors" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/ioannis-ktenidis/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-colors shadow-sm" title="LinkedIn">
           <i class="fa-brands fa-linkedin-in text-sm"></i>
         </a>
-        <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-colors" title="Google Scholar">
+        <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-colors shadow-sm" title="Google Scholar">
           <i class="fa-brands fa-google text-sm"></i>
         </a>
-        <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-colors" title="ORCID">
+        <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-colors shadow-sm" title="ORCID">
           <i class="fa-brands fa-orcid text-sm"></i>
         </a>
-        <a href="mailto:joktenis2@gmail.com" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-colors" title="Email">
+        <a href="mailto:joktenis2@gmail.com" class="w-8 h-8 rounded-full bg-white border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-colors shadow-sm" title="Email">
           <i class="fa-solid fa-envelope text-sm"></i>
         </a>
       </div>
-      <p class="text-[11px] text-center text-slate-500 mt-3">© <span id="current-year"></span> Ioannis Ktenidis</p>
+      <p class="text-[11px] text-center text-slate-500 mt-2.5 font-sans">© <span id="current-year"></span> Ioannis Ktenidis</p>
     </div>
   </aside>
 
   <!-- ========================================================
        MOBILE TOP BAR & DRAWER
        ======================================================== -->
-  <header class="md:hidden sticky top-0 z-30 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-4 py-3 flex items-center justify-between">
+  <header class="md:hidden sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 py-3 flex items-center justify-between shadow-sm">
     <div class="flex items-center gap-3">
-      <img src="assets/images/avatar.jpg" onerror="this.src='https://avatars.githubusercontent.com/u/185906519?v=4'" alt="Ioannis Ktenidis" class="w-9 h-9 rounded-full object-cover border border-sky-400">
+      <img src="assets/images/avatar.jpg" onerror="this.src='https://avatars.githubusercontent.com/u/185906519?v=4'" alt="Ioannis Ktenidis" class="w-9 h-9 rounded-full object-cover border border-slate-200">
       <div>
-        <h2 class="font-bold text-sm text-white leading-tight">Ioannis Ktenidis</h2>
-        <p class="text-[11px] text-sky-400">Software Developer & AI Researcher</p>
+        <h2 class="font-serif font-bold text-sm text-slate-900 leading-tight">Ioannis Ktenidis</h2>
+        <p class="text-[11px] text-blue-700 font-medium">Software Developer & AI Researcher</p>
       </div>
     </div>
-    <button id="mobile-menu-btn" class="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle menu">
+    <button id="mobile-menu-btn" class="p-2 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 focus:outline-none" aria-label="Toggle menu">
       <i class="fa-solid fa-bars text-lg"></i>
     </button>
   </header>
 
   <!-- Mobile Backdrop & Drawer Menu -->
-  <div id="mobile-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden md:hidden"></div>
-  <div id="mobile-sidebar" class="fixed top-0 left-0 bottom-0 w-64 bg-slate-900 border-r border-slate-800 z-50 transform -translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-between p-5">
+  <div id="mobile-backdrop" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-40 hidden md:hidden"></div>
+  <div id="mobile-sidebar" class="fixed top-0 left-0 bottom-0 w-64 bg-white border-r border-slate-200 z-50 transform -translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-between p-5 shadow-2xl">
     <div>
-      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
-        <span class="font-bold text-white">Menu</span>
-        <button id="close-mobile-menu-btn" class="p-1 text-slate-400 hover:text-white" aria-label="Close menu">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <span class="font-serif font-bold text-slate-900">Navigation</span>
+        <button id="close-mobile-menu-btn" class="p-1 text-slate-400 hover:text-slate-800" aria-label="Close menu">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
       <nav class="mt-4 space-y-1">
-        <a href="#home" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800">
-          <i class="fa-solid fa-house w-5 text-sky-400"></i> Home
+        <a href="#home" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50">
+          <i class="fa-solid fa-house w-5 text-blue-700"></i> Home
         </a>
-        <a href="#about" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800">
-          <i class="fa-solid fa-user w-5 text-sky-400"></i> About
+        <a href="#about" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50">
+          <i class="fa-solid fa-user w-5 text-blue-700"></i> About
         </a>
-        <a href="#experience" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800">
-          <i class="fa-solid fa-briefcase w-5 text-sky-400"></i> Experience
+        <a href="#experience" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50">
+          <i class="fa-solid fa-briefcase w-5 text-blue-700"></i> Experience
         </a>
-        <a href="#projects" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800">
-          <i class="fa-solid fa-code w-5 text-sky-400"></i> Projects & GitHub
+        <a href="#projects" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50">
+          <i class="fa-solid fa-code w-5 text-blue-700"></i> Projects & GitHub
         </a>
-        <a href="#education" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800">
-          <i class="fa-solid fa-graduation-cap w-5 text-sky-400"></i> Education
+        <a href="#education" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50">
+          <i class="fa-solid fa-graduation-cap w-5 text-blue-700"></i> Education
         </a>
-        <a href="#skills" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800">
-          <i class="fa-solid fa-layer-group w-5 text-sky-400"></i> Skills
+        <a href="#skills" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50">
+          <i class="fa-solid fa-layer-group w-5 text-blue-700"></i> Skills
         </a>
-        <a href="#contact" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800">
-          <i class="fa-solid fa-envelope w-5 text-sky-400"></i> Contact
+        <a href="#contact" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50">
+          <i class="fa-solid fa-envelope w-5 text-blue-700"></i> Contact
         </a>
       </nav>
     </div>
-    <div class="flex justify-center gap-3 pt-4 border-t border-slate-800">
-      <a href="https://github.com/IoannisKtenidis" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-white"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/ioannis-ktenidis/" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="mailto:joktenis2@gmail.com" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-white"><i class="fa-solid fa-envelope"></i></a>
+    <div class="flex justify-center gap-3 pt-4 border-t border-slate-100">
+      <a href="https://github.com/IoannisKtenidis" target="_blank" class="w-8 h-8 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center hover:bg-blue-700 hover:text-white"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/ioannis-ktenidis/" target="_blank" class="w-8 h-8 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center hover:bg-blue-700 hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="mailto:joktenis2@gmail.com" class="w-8 h-8 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center hover:bg-blue-700 hover:text-white"><i class="fa-solid fa-envelope"></i></a>
     </div>
   </div>
 
   <!-- ========================================================
-       MAIN CONTENT CONTAINER
+       MAIN CONTENT CONTAINER (Soft Neutral Base: #F8F9FA)
        ======================================================== -->
-  <main class="md:ml-72 min-h-screen bg-slate-950 text-slate-100 flex-1">
+  <main class="md:ml-72 min-h-screen bg-[#F8F9FA] text-[#1E293B] flex-1">
 
     <!-- ========================================================
-         HERO SECTION (#home)
+         HERO SECTION (#home) - High-Impact Editorial
          ======================================================== -->
-    <section id="home" class="min-h-screen flex flex-col justify-center px-6 lg:px-16 py-20 relative bg-grid-pattern hero-glow">
+    <section id="home" class="min-h-screen flex flex-col justify-center px-6 lg:px-16 py-20 relative bg-subtle-grid border-b border-slate-200">
       <div class="max-w-4xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-950/60 border border-sky-500/30 text-sky-300 text-xs font-semibold mb-6">
-          <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
           Software Engineer & AI/ML Researcher
         </div>
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
-          Ioannis <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">Ktenidis</span>
+        <!-- H1: 36px to 54px Serif -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-slate-900 leading-tight">
+          Ioannis <span class="text-blue-700">Ktenidis</span>
         </h1>
 
-        <p class="mt-4 text-xl sm:text-2xl text-slate-300 font-medium">
-          Software Developer <span class="text-sky-400">|</span> AI & ML Researcher
+        <!-- Subheading: 20px to 24px -->
+        <p class="mt-4 text-xl sm:text-2xl font-serif text-slate-700 font-medium">
+          Software Developer <span class="text-blue-700 font-sans">|</span> AI & ML Researcher
         </p>
 
-        <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed">
-          Bridging academic research and modern software engineering. Specializing in resilient back-end architectures, automated data pipelines, real-time cybersecurity diagnostics, and intelligent machine learning models.
+        <!-- Body: 16px with 1.65 line height -->
+        <p class="mt-6 text-base sm:text-lg text-slate-600 max-w-2xl leading-[1.65]">
+          Bridging academic research and modern software engineering. Specializing in resilient server-side architectures, automated data pipelines, real-time cybersecurity diagnostics, and intelligent machine learning models.
         </p>
 
         <!-- Affiliation Badges -->
-        <div class="mt-6 flex flex-wrap gap-2 text-xs text-slate-300">
-          <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center gap-2">
-            <i class="fa-solid fa-bolt text-yellow-400"></i> Public Power Corporation S.A. (SECASSURED)
+        <div class="mt-6 flex flex-wrap gap-2.5 text-xs text-slate-700 font-medium">
+          <span class="px-3.5 py-2 rounded-lg bg-white border border-slate-200 shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-bolt text-amber-500"></i> Public Power Corporation S.A. (SECASSURED)
           </span>
-          <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center gap-2">
-            <i class="fa-solid fa-flask text-sky-400"></i> Ithaca Lab (University of Western Macedonia)
+          <span class="px-3.5 py-2 rounded-lg bg-white border border-slate-200 shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-flask text-blue-700"></i> Ithaca Lab (University of Western Macedonia)
           </span>
         </div>
 
-        <!-- Action Buttons -->
+        <!-- Action Buttons (Navy Blue Anchor) -->
         <div class="mt-8 flex flex-wrap gap-4 items-center">
-          <a href="#projects" class="px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition-all shadow-lg shadow-sky-600/25 flex items-center gap-2">
+          <a href="#projects" class="px-6 py-3.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm transition-all shadow-sm hover:shadow flex items-center gap-2">
             <i class="fa-solid fa-code"></i> Explore Projects
           </a>
-          <a href="https://github.com/IoannisKtenidis" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-all border border-slate-700 flex items-center gap-2">
-            <i class="fa-brands fa-github"></i> GitHub Profile
+          <a href="https://github.com/IoannisKtenidis" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm transition-all border border-slate-300 shadow-sm flex items-center gap-2">
+            <i class="fa-brands fa-github text-slate-900"></i> GitHub Profile
           </a>
-          <a href="#contact" class="px-6 py-3 rounded-xl bg-transparent hover:bg-slate-900 text-slate-300 font-medium text-sm transition-all border border-slate-800 flex items-center gap-2">
-            <i class="fa-solid fa-envelope"></i> Contact Me
+          <a href="#contact" class="px-6 py-3.5 rounded-xl bg-transparent hover:bg-slate-100 text-slate-700 font-medium text-sm transition-all border border-slate-300 flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-blue-700"></i> Contact Me
           </a>
         </div>
       </div>
 
-      <!-- Scroll Indicator -->
-      <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-16 md:translate-x-0 text-slate-500 hover:text-sky-400 transition-colors flex items-center gap-2 text-xs uppercase tracking-widest">
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-16 md:translate-x-0 text-slate-400 hover:text-blue-700 transition-colors flex items-center gap-2 text-xs uppercase tracking-widest font-semibold">
         <span>Scroll Down</span>
-        <i class="fa-solid fa-chevron-down animate-bounce text-sm"></i>
+        <i class="fa-solid fa-chevron-down animate-bounce text-sm text-blue-700"></i>
       </a>
     </section>
 
     <!-- ========================================================
          ABOUT SECTION (#about)
          ======================================================== -->
-    <section id="about" class="px-6 lg:px-16 py-24 border-t border-slate-900 bg-slate-950">
+    <section id="about" class="px-6 lg:px-16 py-24 bg-white border-b border-slate-200">
       <div class="max-w-5xl">
-        <!-- Section Title (Style like pradoglougrammatikis.com) -->
+        
+        <!-- Section Heading: 32px Serif with Navy Accent Bar -->
         <div class="mb-12">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">About.</h2>
-          <div class="w-16 h-1 bg-sky-500 mt-2 rounded"></div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">About.</h2>
+          <div class="w-16 h-1 bg-blue-700 mt-2.5 rounded"></div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
           <!-- Summary Text (Left Col) -->
-          <div class="lg:col-span-7 space-y-5 text-slate-300 leading-relaxed">
-            <h3 class="text-xl font-bold text-white">Software Engineer & AI/ML Researcher</h3>
+          <div class="lg:col-span-7 space-y-5 text-slate-700 text-base leading-[1.65]">
+            <h3 class="text-xl sm:text-2xl font-serif font-bold text-slate-900">Software Engineer & AI/ML Researcher</h3>
             
             <p>
-              I am a Software Engineer and AI/ML Researcher with an <strong>MSc in Artificial Intelligence</strong> and a <strong>BSc in Applied Informatics</strong>. I combine rigorous academic foundation with practical software engineering experience, possessing strong expertise in Python, SQL database optimization, and full-stack web technologies.
+              I am a Software Engineer and AI/ML Researcher with an <strong>MSc in Artificial Intelligence</strong> and a <strong>BSc in Applied Informatics</strong>. I combine rigorous academic knowledge with hands-on software engineering, possessing strong expertise in Python, SQL database optimization, and full-stack web technologies.
             </p>
 
             <p>
@@ -271,12 +281,12 @@
               I am experienced in leading European (Horizon 2020 / Horizon Europe) and national research projects at <strong>Ithaca Lab (University of Western Macedonia)</strong>, focusing on system resilience, Intrusion Detection Systems (IDS), Honeypots, automated data pipelines, and CI/CD workflows within distributed teams.
             </p>
 
-            <!-- Career Goals & Technical Interests -->
-            <div class="p-5 rounded-2xl glass-card border border-slate-800 mt-6">
-              <h4 class="text-sm font-semibold uppercase tracking-wider text-sky-400 mb-2">
+            <!-- Career Goals & Technical Interests Card -->
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 mt-6 shadow-sm">
+              <h4 class="text-sm font-semibold uppercase tracking-wider text-blue-700 mb-2 font-sans">
                 <i class="fa-solid fa-bullseye mr-1.5"></i> Career Focus & Technical Interests
               </h4>
-              <p class="text-sm text-slate-300">
+              <p class="text-sm text-slate-700 leading-relaxed">
                 Dedicated to advancing as a Back-End and Software Engineer by combining resilient server-side architectures, SQL database performance, and modern DevOps/CI/CD automation with applied AI/ML, distributed systems, IoT, and cybersecurity.
               </p>
             </div>
@@ -284,48 +294,48 @@
 
           <!-- Quick Info Card (Right Col) -->
           <div class="lg:col-span-5">
-            <div class="glass-card p-6 rounded-2xl border border-slate-800 shadow-xl space-y-5">
-              <div class="text-center pb-4 border-b border-slate-800">
+            <div class="editorial-card p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+              <div class="text-center pb-5 border-b border-slate-100">
                 <img 
                   src="assets/images/avatar.jpg" 
                   onerror="this.src='https://avatars.githubusercontent.com/u/185906519?v=4'" 
                   alt="Ioannis Ktenidis" 
-                  class="w-24 h-24 rounded-full mx-auto object-cover border-2 border-sky-400/50 shadow-md mb-3">
-                <h4 class="text-lg font-bold text-white">Ioannis Ktenidis</h4>
-                <p class="text-xs text-sky-400">Software Developer | Researcher</p>
+                  class="w-24 h-24 rounded-full mx-auto object-cover border-2 border-slate-200 shadow-sm mb-3">
+                <h4 class="text-lg font-serif font-bold text-slate-900">Ioannis Ktenidis</h4>
+                <p class="text-xs text-blue-700 font-semibold uppercase tracking-wide">Software Developer | Researcher</p>
               </div>
 
-              <div class="space-y-3 text-sm">
-                <div class="flex items-center justify-between text-slate-300">
-                  <span class="text-slate-500 font-medium"><i class="fa-solid fa-location-dot w-5 text-sky-400"></i> Location:</span>
-                  <span>Greece</span>
+              <div class="space-y-3.5 text-sm">
+                <div class="flex items-center justify-between text-slate-700">
+                  <span class="text-slate-500 font-medium"><i class="fa-solid fa-location-dot w-5 text-blue-700"></i> Location:</span>
+                  <span class="font-medium text-slate-900">Greece</span>
                 </div>
-                <div class="flex items-center justify-between text-slate-300">
-                  <span class="text-slate-500 font-medium"><i class="fa-solid fa-envelope w-5 text-sky-400"></i> Email:</span>
-                  <a href="mailto:joktenis2@gmail.com" class="text-sky-400 hover:underline">joktenis2@gmail.com</a>
+                <div class="flex items-center justify-between text-slate-700">
+                  <span class="text-slate-500 font-medium"><i class="fa-solid fa-envelope w-5 text-blue-700"></i> Email:</span>
+                  <a href="mailto:joktenis2@gmail.com" class="text-blue-700 font-medium hover:underline">joktenis2@gmail.com</a>
                 </div>
-                <div class="flex items-center justify-between text-slate-300">
-                  <span class="text-slate-500 font-medium"><i class="fa-solid fa-phone w-5 text-sky-400"></i> Phone:</span>
-                  <span>(+30) 6986776234</span>
+                <div class="flex items-center justify-between text-slate-700">
+                  <span class="text-slate-500 font-medium"><i class="fa-solid fa-phone w-5 text-blue-700"></i> Phone:</span>
+                  <span class="font-medium text-slate-900">(+30) 6986776234</span>
                 </div>
-                <div class="flex items-center justify-between text-slate-300">
-                  <span class="text-slate-500 font-medium"><i class="fa-solid fa-language w-5 text-sky-400"></i> Languages:</span>
-                  <span>English (C2), German (B1)</span>
+                <div class="flex items-center justify-between text-slate-700">
+                  <span class="text-slate-500 font-medium"><i class="fa-solid fa-language w-5 text-blue-700"></i> Languages:</span>
+                  <span class="font-medium text-slate-900">English (C2), German (B1)</span>
                 </div>
-                <div class="flex items-center justify-between text-slate-300">
-                  <span class="text-slate-500 font-medium"><i class="fa-solid fa-shield-halved w-5 text-sky-400"></i> Military:</span>
-                  <span>Completed</span>
+                <div class="flex items-center justify-between text-slate-700">
+                  <span class="text-slate-500 font-medium"><i class="fa-solid fa-shield-halved w-5 text-blue-700"></i> Military:</span>
+                  <span class="font-medium text-slate-900">Completed</span>
                 </div>
               </div>
 
-              <div class="pt-4 border-t border-slate-800 flex justify-center gap-3">
-                <a href="https://github.com/IoannisKtenidis" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-sky-600 hover:text-white flex items-center justify-center transition-all text-slate-300 border border-slate-700/60" title="GitHub">
+              <div class="pt-5 border-t border-slate-100 flex justify-center gap-3">
+                <a href="https://github.com/IoannisKtenidis" target="_blank" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-blue-700 hover:text-white flex items-center justify-center transition-all text-slate-700 border border-slate-200 shadow-sm" title="GitHub">
                   <i class="fa-brands fa-github text-base"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/ioannis-ktenidis/" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-sky-600 hover:text-white flex items-center justify-center transition-all text-slate-300 border border-slate-700/60" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/ioannis-ktenidis/" target="_blank" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-blue-700 hover:text-white flex items-center justify-center transition-all text-slate-700 border border-slate-200 shadow-sm" title="LinkedIn">
                   <i class="fa-brands fa-linkedin-in text-base"></i>
                 </a>
-                <a href="mailto:joktenis2@gmail.com" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-sky-600 hover:text-white flex items-center justify-center transition-all text-slate-300 border border-slate-700/60" title="Email">
+                <a href="mailto:joktenis2@gmail.com" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-blue-700 hover:text-white flex items-center justify-center transition-all text-slate-700 border border-slate-200 shadow-sm" title="Email">
                   <i class="fa-solid fa-envelope text-base"></i>
                 </a>
               </div>
@@ -339,127 +349,127 @@
     <!-- ========================================================
          EXPERIENCE SECTION (#experience)
          ======================================================== -->
-    <section id="experience" class="px-6 lg:px-16 py-24 border-t border-slate-900 bg-slate-900/40">
+    <section id="experience" class="px-6 lg:px-16 py-24 bg-[#F8F9FA] border-b border-slate-200">
       <div class="max-w-5xl">
         <div class="mb-12">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Experience.</h2>
-          <div class="w-16 h-1 bg-sky-500 mt-2 rounded"></div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">Experience.</h2>
+          <div class="w-16 h-1 bg-blue-700 mt-2.5 rounded"></div>
         </div>
 
         <!-- Vertical Timeline -->
-        <div class="relative border-l-2 border-slate-800 ml-4 sm:ml-6 space-y-12">
+        <div class="relative border-l-2 border-slate-300 ml-4 sm:ml-6 space-y-10">
 
-          <!-- Job 1 -->
+          <!-- Role 1 -->
           <div class="relative pl-6 sm:pl-8 timeline-item">
-            <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover">
+            <div class="editorial-card p-6 sm:p-7 rounded-2xl border border-slate-200 editorial-card-hover">
               <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h3 class="text-lg sm:text-xl font-bold text-white">
+                <h3 class="text-xl font-serif font-bold text-slate-900">
                   Software & Security Research Associate
                 </h3>
-                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-sky-950 text-sky-400 border border-sky-800/60">
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
                   June 2026 – Present
                 </span>
               </div>
-              <h4 class="text-sm font-medium text-sky-400 mb-4">
-                <i class="fa-solid fa-building mr-1.5"></i> Public Power Corporation S.A.
+              <h4 class="text-sm font-semibold text-blue-700 mb-4 font-sans flex items-center gap-2">
+                <i class="fa-solid fa-building"></i> Public Power Corporation S.A.
               </h4>
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              <p class="text-slate-700 text-sm leading-[1.65] mb-4">
                 Provide technical and engineering support for the EU-funded research project <strong>SECASSURED (Horizon Europe)</strong>, focusing on cybersecurity, digital infrastructure resilience, and secure software supply chains. Designed and implemented an end-to-end, real-time anomaly detection and diagnostics pipeline for EV charging stations.
               </p>
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">Python</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">BentoML</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">PyTorch</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">MLflow</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">WebSockets</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">Docker & Compose</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">REST APIs</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">Python</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">BentoML</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">PyTorch</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">MLflow</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">WebSockets</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">Docker & Compose</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">REST APIs</span>
               </div>
             </div>
           </div>
 
-          <!-- Job 2 -->
+          <!-- Role 2 -->
           <div class="relative pl-6 sm:pl-8 timeline-item">
-            <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover">
+            <div class="editorial-card p-6 sm:p-7 rounded-2xl border border-slate-200 editorial-card-hover">
               <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h3 class="text-lg sm:text-xl font-bold text-white">
+                <h3 class="text-xl font-serif font-bold text-slate-900">
                   AI/ML Engineer & Researcher
                 </h3>
-                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
                   February 2025 – June 2026
                 </span>
               </div>
-              <h4 class="text-sm font-medium text-sky-400 mb-4">
-                <i class="fa-solid fa-flask mr-1.5"></i> Ithaca Lab (University of Western Macedonia)
+              <h4 class="text-sm font-semibold text-blue-700 mb-4 font-sans flex items-center gap-2">
+                <i class="fa-solid fa-flask"></i> Ithaca Lab (University of Western Macedonia)
               </h4>
-              <p class="text-slate-300 text-sm leading-relaxed mb-3">
+              <p class="text-slate-700 text-sm leading-[1.65] mb-3">
                 Contributed as a technical researcher to European (Horizon 2020) and national research projects, specialising in AI/ML techniques. Analyzed complex datasets, developed machine learning models, and integrated them into robust research infrastructures for real-world applications.
               </p>
               
-              <div class="space-y-2 mb-4 text-xs text-slate-300 bg-slate-900/60 p-3 rounded-xl border border-slate-800/80">
-                <div><strong class="text-white">• AI4CYBER (Horizon 2020):</strong> Developed advanced ML models at the intersection of AI and cybersecurity for system resilience.</div>
-                <div><strong class="text-white">• ASKOS (NRRP):</strong> Designed experimental scenarios, deployed Intrusion Detection Systems and Honeypots, analyzed security data.</div>
-                <div><strong class="text-white">• TORNADO (Horizon Europe):</strong> Implemented algorithms for robotic perception, human awareness, and Human-Robot Interaction (HRI).</div>
+              <div class="space-y-2 mb-4 text-xs text-slate-700 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                <div><strong class="text-slate-900">• AI4CYBER (Horizon 2020):</strong> Developed advanced ML models at the intersection of AI and cybersecurity for system resilience.</div>
+                <div><strong class="text-slate-900">• ASKOS (NRRP):</strong> Designed experimental scenarios, deployed Intrusion Detection Systems and Honeypots, analyzed security data.</div>
+                <div><strong class="text-slate-900">• TORNADO (Horizon Europe):</strong> Implemented algorithms for robotic perception, human awareness, and Human-Robot Interaction (HRI).</div>
               </div>
 
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">Python</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">PyTorch</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">NumPy & Pandas</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">Scikit-learn</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">Honeypots / IDS</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">Python</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">PyTorch</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">NumPy & Pandas</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">Scikit-learn</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">Honeypots / IDS</span>
               </div>
             </div>
           </div>
 
-          <!-- Job 3 -->
+          <!-- Role 3 -->
           <div class="relative pl-6 sm:pl-8 timeline-item">
-            <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover">
+            <div class="editorial-card p-6 sm:p-7 rounded-2xl border border-slate-200 editorial-card-hover">
               <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h3 class="text-lg sm:text-xl font-bold text-white">
+                <h3 class="text-xl font-serif font-bold text-slate-900">
                   Freelance Web Developer
                 </h3>
-                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
                   July 2024 – February 2025
                 </span>
               </div>
-              <h4 class="text-sm font-medium text-sky-400 mb-4">
-                <i class="fa-solid fa-laptop-code mr-1.5"></i> Self-Employed
+              <h4 class="text-sm font-semibold text-blue-700 mb-4 font-sans flex items-center gap-2">
+                <i class="fa-solid fa-laptop-code"></i> Self-Employed
               </h4>
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              <p class="text-slate-700 text-sm leading-[1.65] mb-4">
                 Designed and developed responsive websites from end-to-end, translating client requirements into highly functional web solutions. Managed client communications ensuring alignment with project goals and high-quality delivery.
               </p>
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">Python</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">JavaScript</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">HTML5 & CSS3</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">WordPress</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">Python</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">JavaScript</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">HTML5 & CSS3</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">WordPress</span>
               </div>
             </div>
           </div>
 
-          <!-- Job 4 -->
+          <!-- Role 4 -->
           <div class="relative pl-6 sm:pl-8 timeline-item">
-            <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover">
+            <div class="editorial-card p-6 sm:p-7 rounded-2xl border border-slate-200 editorial-card-hover">
               <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h3 class="text-lg sm:text-xl font-bold text-white">
+                <h3 class="text-xl font-serif font-bold text-slate-900">
                   Project Manager & Web Designer
                 </h3>
-                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
                   February 2022 – June 2024
                 </span>
               </div>
-              <h4 class="text-sm font-medium text-sky-400 mb-4">
-                <i class="fa-solid fa-bullhorn mr-1.5"></i> Madit Advertising
+              <h4 class="text-sm font-semibold text-blue-700 mb-4 font-sans flex items-center gap-2">
+                <i class="fa-solid fa-bullhorn"></i> Madit Advertising
               </h4>
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              <p class="text-slate-700 text-sm leading-[1.65] mb-4">
                 Managed end-to-end web development projects, monitoring progress from initial conception through to final delivery. Coordinated design and technical tasks to ensure timely execution and high-quality outputs.
               </p>
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">WordPress</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">HTML/CSS</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">JavaScript</span>
-                <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800/80 text-slate-300 border border-slate-700/60">Adobe Creative Suite</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">WordPress</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">HTML/CSS</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">JavaScript</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-800 border border-slate-200">Adobe Creative Suite</span>
               </div>
             </div>
           </div>
@@ -471,40 +481,40 @@
     <!-- ========================================================
          PROJECTS & GITHUB SECTION (#projects)
          ======================================================== -->
-    <section id="projects" class="px-6 lg:px-16 py-24 border-t border-slate-900 bg-slate-950">
+    <section id="projects" class="px-6 lg:px-16 py-24 bg-white border-b border-slate-200">
       <div class="max-w-6xl">
         <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
           <div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Projects & GitHub.</h2>
-            <div class="w-16 h-1 bg-sky-500 mt-2 rounded"></div>
-            <p class="text-slate-400 text-sm mt-3">
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">Projects & GitHub.</h2>
+            <div class="w-16 h-1 bg-blue-700 mt-2.5 rounded"></div>
+            <p class="text-slate-600 text-sm mt-3">
               Explore open-source machine learning pipelines, cybersecurity frameworks, and research tools directly synced from my GitHub.
             </p>
           </div>
 
           <!-- GitHub Profile Quick Card -->
-          <a href="https://github.com/IoannisKtenidis" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 transition-all text-xs font-semibold text-slate-200">
-            <i class="fa-brands fa-github text-lg text-sky-400"></i>
+          <a href="https://github.com/IoannisKtenidis" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-700 transition-all text-xs font-semibold text-slate-800 shadow-sm">
+            <i class="fa-brands fa-github text-xl text-slate-900"></i>
             <div>
-              <div class="text-white">@IoannisKtenidis</div>
-              <div class="text-slate-400 text-[11px]"><span id="github-total-repos">14</span> Public Repositories</div>
+              <div class="text-slate-900">@IoannisKtenidis</div>
+              <div class="text-slate-500 text-[11px]"><span id="github-total-repos">14</span> Repositories on GitHub</div>
             </div>
-            <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-slate-500"></i>
+            <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-slate-400"></i>
           </a>
         </div>
 
-        <!-- Filter Buttons -->
-        <div class="flex flex-wrap gap-2 mb-10">
-          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-sky-500 text-white shadow-md transition-all" data-filter="all">
+        <!-- Filter Buttons (High Contrast) -->
+        <div class="flex flex-wrap gap-2.5 mb-10">
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-blue-700 text-white shadow-sm transition-all" data-filter="all">
             All Projects
           </button>
-          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-filter="ai-ml">
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 transition-all" data-filter="ai-ml">
             AI & MLOps
           </button>
-          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-filter="cybersecurity">
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 transition-all" data-filter="cybersecurity">
             Cybersecurity & IoT
           </button>
-          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-filter="web-tools">
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 transition-all" data-filter="web-tools">
             Web & Tools
           </button>
         </div>
@@ -513,261 +523,261 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <!-- Project 1 -->
-          <div class="project-card glass-card rounded-2xl p-6 border border-slate-800 glass-card-hover flex flex-col justify-between" data-category="ai-ml cybersecurity" data-repo-name="ocpp-intrusion-detection-mlops">
+          <div class="project-card editorial-card rounded-2xl p-6 border border-slate-200 editorial-card-hover flex flex-col justify-between" data-category="ai-ml cybersecurity" data-repo-name="ocpp-intrusion-detection-mlops">
             <div>
-              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span class="px-2.5 py-0.5 rounded-full bg-sky-950 text-sky-400 border border-sky-800/50 font-medium">MLOps & Security</span>
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-semibold">MLOps & Security</span>
                 <div class="flex items-center gap-2">
-                  <span><i class="fa-regular fa-star text-yellow-400 mr-1"></i><span class="repo-stars">0</span></span>
-                  <span><i class="fa-solid fa-code-fork text-slate-500 mr-1"></i><span class="repo-forks">0</span></span>
+                  <span><i class="fa-regular fa-star text-amber-500 mr-1"></i><span class="repo-stars">0</span></span>
+                  <span><i class="fa-solid fa-code-fork text-slate-400 mr-1"></i><span class="repo-forks">0</span></span>
                 </div>
               </div>
-              <h3 class="text-base font-bold text-white mb-2 hover:text-sky-400 transition-colors">
+              <h3 class="text-lg font-serif font-bold text-slate-900 mb-2 hover:text-blue-700 transition-colors">
                 <a href="https://github.com/IoannisKtenidis/ocpp-intrusion-detection-mlops" target="_blank">ocpp-intrusion-detection-mlops</a>
               </h3>
-              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              <p class="text-slate-600 text-xs leading-[1.65] mb-4">
                 End-to-end MLOps pipeline for real-time cyberattack identification in EV Charging Stations utilizing BentoML, MLflow, and deep learning.
               </p>
             </div>
             <div>
               <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Python</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">MLflow</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">BentoML</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Python</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">MLflow</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">BentoML</span>
               </div>
-              <a href="https://github.com/IoannisKtenidis/ocpp-intrusion-detection-mlops" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1.5">
+              <a href="https://github.com/IoannisKtenidis/ocpp-intrusion-detection-mlops" target="_blank" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1.5">
                 View Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </a>
             </div>
           </div>
 
           <!-- Project 2 -->
-          <div class="project-card glass-card rounded-2xl p-6 border border-slate-800 glass-card-hover flex flex-col justify-between" data-category="ai-ml" data-repo-name="ev-charging-diagnostics-pipeline">
+          <div class="project-card editorial-card rounded-2xl p-6 border border-slate-200 editorial-card-hover flex flex-col justify-between" data-category="ai-ml" data-repo-name="ev-charging-diagnostics-pipeline">
             <div>
-              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span class="px-2.5 py-0.5 rounded-full bg-indigo-950 text-indigo-400 border border-indigo-800/50 font-medium">LogBERT & NLP</span>
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 font-semibold">LogBERT & NLP</span>
                 <div class="flex items-center gap-2">
-                  <span><i class="fa-regular fa-star text-yellow-400 mr-1"></i><span class="repo-stars">0</span></span>
-                  <span><i class="fa-solid fa-code-fork text-slate-500 mr-1"></i><span class="repo-forks">0</span></span>
+                  <span><i class="fa-regular fa-star text-amber-500 mr-1"></i><span class="repo-stars">0</span></span>
+                  <span><i class="fa-solid fa-code-fork text-slate-400 mr-1"></i><span class="repo-forks">0</span></span>
                 </div>
               </div>
-              <h3 class="text-base font-bold text-white mb-2 hover:text-sky-400 transition-colors">
+              <h3 class="text-lg font-serif font-bold text-slate-900 mb-2 hover:text-blue-700 transition-colors">
                 <a href="https://github.com/IoannisKtenidis/ev-charging-diagnostics-pipeline" target="_blank">ev-charging-diagnostics-pipeline</a>
               </h3>
-              <p class="text-slate-300 text-xs leading-relaxed mb-4">
-                Containerized deep learning pipeline using LogBERT for anomaly detection and automated diagnostic reporting on electric vehicle charging stations.
+              <p class="text-slate-600 text-xs leading-[1.65] mb-4">
+                Containerized deep learning pipeline using LogBERT for anomaly detection and automated diagnostic reporting on electric vehicle chargers.
               </p>
             </div>
             <div>
               <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">PyTorch</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">LogBERT</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Docker</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">PyTorch</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">LogBERT</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Docker</span>
               </div>
-              <a href="https://github.com/IoannisKtenidis/ev-charging-diagnostics-pipeline" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1.5">
+              <a href="https://github.com/IoannisKtenidis/ev-charging-diagnostics-pipeline" target="_blank" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1.5">
                 View Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </a>
             </div>
           </div>
 
           <!-- Project 3 -->
-          <div class="project-card glass-card rounded-2xl p-6 border border-slate-800 glass-card-hover flex flex-col justify-between" data-category="cybersecurity ai-ml" data-repo-name="evcs-federated-active-defense">
+          <div class="project-card editorial-card rounded-2xl p-6 border border-slate-200 editorial-card-hover flex flex-col justify-between" data-category="cybersecurity ai-ml" data-repo-name="evcs-federated-active-defense">
             <div>
-              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span class="px-2.5 py-0.5 rounded-full bg-purple-950 text-purple-400 border border-purple-800/50 font-medium">Federated Learning</span>
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-semibold">Federated Learning</span>
                 <div class="flex items-center gap-2">
-                  <span><i class="fa-regular fa-star text-yellow-400 mr-1"></i><span class="repo-stars">0</span></span>
-                  <span><i class="fa-solid fa-code-fork text-slate-500 mr-1"></i><span class="repo-forks">0</span></span>
+                  <span><i class="fa-regular fa-star text-amber-500 mr-1"></i><span class="repo-stars">0</span></span>
+                  <span><i class="fa-solid fa-code-fork text-slate-400 mr-1"></i><span class="repo-forks">0</span></span>
                 </div>
               </div>
-              <h3 class="text-base font-bold text-white mb-2 hover:text-sky-400 transition-colors">
+              <h3 class="text-lg font-serif font-bold text-slate-900 mb-2 hover:text-blue-700 transition-colors">
                 <a href="https://github.com/IoannisKtenidis/evcs-federated-active-defense" target="_blank">evcs-federated-active-defense</a>
               </h3>
-              <p class="text-slate-300 text-xs leading-relaxed mb-4">
-                Containerized active defense loop for EV charging infrastructure using federated learning to preserve data privacy across multiple stations.
+              <p class="text-slate-600 text-xs leading-[1.65] mb-4">
+                Containerized active defense loop for EV charging infrastructure using federated learning to preserve privacy across stations.
               </p>
             </div>
             <div>
               <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Python</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Federated Learning</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Security</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Python</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Federated Learning</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Security</span>
               </div>
-              <a href="https://github.com/IoannisKtenidis/evcs-federated-active-defense" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1.5">
+              <a href="https://github.com/IoannisKtenidis/evcs-federated-active-defense" target="_blank" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1.5">
                 View Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </a>
             </div>
           </div>
 
           <!-- Project 4 -->
-          <div class="project-card glass-card rounded-2xl p-6 border border-slate-800 glass-card-hover flex flex-col justify-between" data-category="cybersecurity ai-ml" data-repo-name="iot-privacy-preserving-techniques">
+          <div class="project-card editorial-card rounded-2xl p-6 border border-slate-200 editorial-card-hover flex flex-col justify-between" data-category="cybersecurity ai-ml" data-repo-name="iot-privacy-preserving-techniques">
             <div>
-              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span class="px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800/50 font-medium">Privacy & NLP</span>
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold">Privacy & NLP</span>
                 <div class="flex items-center gap-2">
-                  <span><i class="fa-regular fa-star text-yellow-400 mr-1"></i><span class="repo-stars">0</span></span>
-                  <span><i class="fa-solid fa-code-fork text-slate-500 mr-1"></i><span class="repo-forks">0</span></span>
+                  <span><i class="fa-regular fa-star text-amber-500 mr-1"></i><span class="repo-stars">0</span></span>
+                  <span><i class="fa-solid fa-code-fork text-slate-400 mr-1"></i><span class="repo-forks">0</span></span>
                 </div>
               </div>
-              <h3 class="text-base font-bold text-white mb-2 hover:text-sky-400 transition-colors">
+              <h3 class="text-lg font-serif font-bold text-slate-900 mb-2 hover:text-blue-700 transition-colors">
                 <a href="https://github.com/IoannisKtenidis/iot-privacy-preserving-techniques" target="_blank">iot-privacy-preserving-techniques</a>
               </h3>
-              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              <p class="text-slate-600 text-xs leading-[1.65] mb-4">
                 Comparative analysis and pipeline implementation of contextual data anonymization using Microsoft Presidio and SpaCy for IoT systems.
               </p>
             </div>
             <div>
               <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Presidio</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">SpaCy</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">IoT Privacy</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Presidio</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">SpaCy</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">IoT Privacy</span>
               </div>
-              <a href="https://github.com/IoannisKtenidis/iot-privacy-preserving-techniques" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1.5">
+              <a href="https://github.com/IoannisKtenidis/iot-privacy-preserving-techniques" target="_blank" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1.5">
                 View Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </a>
             </div>
           </div>
 
           <!-- Project 5 -->
-          <div class="project-card glass-card rounded-2xl p-6 border border-slate-800 glass-card-hover flex flex-col justify-between" data-category="ai-ml" data-repo-name="Hybrid-ML-quantum">
+          <div class="project-card editorial-card rounded-2xl p-6 border border-slate-200 editorial-card-hover flex flex-col justify-between" data-category="ai-ml" data-repo-name="Hybrid-ML-quantum">
             <div>
-              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span class="px-2.5 py-0.5 rounded-full bg-amber-950 text-amber-400 border border-amber-800/50 font-medium">Quantum & ML</span>
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200 font-semibold">Quantum & ML</span>
                 <div class="flex items-center gap-2">
-                  <span><i class="fa-regular fa-star text-yellow-400 mr-1"></i><span class="repo-stars">0</span></span>
-                  <span><i class="fa-solid fa-code-fork text-slate-500 mr-1"></i><span class="repo-forks">0</span></span>
+                  <span><i class="fa-regular fa-star text-amber-500 mr-1"></i><span class="repo-stars">0</span></span>
+                  <span><i class="fa-solid fa-code-fork text-slate-400 mr-1"></i><span class="repo-forks">0</span></span>
                 </div>
               </div>
-              <h3 class="text-base font-bold text-white mb-2 hover:text-sky-400 transition-colors">
+              <h3 class="text-lg font-serif font-bold text-slate-900 mb-2 hover:text-blue-700 transition-colors">
                 <a href="https://github.com/IoannisKtenidis/Hybrid-ML-quantum" target="_blank">Hybrid-ML-quantum</a>
               </h3>
-              <p class="text-slate-300 text-xs leading-relaxed mb-4">
-                Hybrid demo combining classical Machine Learning algorithms with Quantum Computing principles for advanced classification challenges.
+              <p class="text-slate-600 text-xs leading-[1.65] mb-4">
+                Hybrid demo combining classical Machine Learning algorithms with Quantum Computing principles for complex classification challenges.
               </p>
             </div>
             <div>
               <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Python</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Quantum ML</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Scikit-learn</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Python</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Quantum ML</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Scikit-learn</span>
               </div>
-              <a href="https://github.com/IoannisKtenidis/Hybrid-ML-quantum" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1.5">
+              <a href="https://github.com/IoannisKtenidis/Hybrid-ML-quantum" target="_blank" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1.5">
                 View Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </a>
             </div>
           </div>
 
           <!-- Project 6 -->
-          <div class="project-card glass-card rounded-2xl p-6 border border-slate-800 glass-card-hover flex flex-col justify-between" data-category="cybersecurity ai-ml" data-repo-name="Multiclass-Network-Traffic-Classification-with-XGBoost-and-MLP">
+          <div class="project-card editorial-card rounded-2xl p-6 border border-slate-200 editorial-card-hover flex flex-col justify-between" data-category="cybersecurity ai-ml" data-repo-name="Multiclass-Network-Traffic-Classification-with-XGBoost-and-MLP">
             <div>
-              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span class="px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-800/50 font-medium">Network Traffic</span>
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-cyan-50 text-cyan-800 border border-cyan-200 font-semibold">Network Traffic</span>
                 <div class="flex items-center gap-2">
-                  <span><i class="fa-regular fa-star text-yellow-400 mr-1"></i><span class="repo-stars">0</span></span>
-                  <span><i class="fa-solid fa-code-fork text-slate-500 mr-1"></i><span class="repo-forks">0</span></span>
+                  <span><i class="fa-regular fa-star text-amber-500 mr-1"></i><span class="repo-stars">0</span></span>
+                  <span><i class="fa-solid fa-code-fork text-slate-400 mr-1"></i><span class="repo-forks">0</span></span>
                 </div>
               </div>
-              <h3 class="text-base font-bold text-white mb-2 hover:text-sky-400 transition-colors">
+              <h3 class="text-lg font-serif font-bold text-slate-900 mb-2 hover:text-blue-700 transition-colors">
                 <a href="https://github.com/IoannisKtenidis/Multiclass-Network-Traffic-Classification-with-XGBoost-and-MLP" target="_blank">Network Traffic Classifier</a>
               </h3>
-              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              <p class="text-slate-600 text-xs leading-[1.65] mb-4">
                 Multiclass network traffic classification analyzing network packets with XGBoost and Multi-Layer Perceptrons (MLP) for cyber anomaly identification.
               </p>
             </div>
             <div>
               <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">XGBoost</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">PyTorch MLP</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Network Security</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">XGBoost</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">PyTorch MLP</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Network Security</span>
               </div>
-              <a href="https://github.com/IoannisKtenidis/Multiclass-Network-Traffic-Classification-with-XGBoost-and-MLP" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1.5">
+              <a href="https://github.com/IoannisKtenidis/Multiclass-Network-Traffic-Classification-with-XGBoost-and-MLP" target="_blank" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1.5">
                 View Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </a>
             </div>
           </div>
 
           <!-- Project 7 -->
-          <div class="project-card glass-card rounded-2xl p-6 border border-slate-800 glass-card-hover flex flex-col justify-between" data-category="cybersecurity" data-repo-name="intelligent-iomt-traffic-management">
+          <div class="project-card editorial-card rounded-2xl p-6 border border-slate-200 editorial-card-hover flex flex-col justify-between" data-category="cybersecurity" data-repo-name="intelligent-iomt-traffic-management">
             <div>
-              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span class="px-2.5 py-0.5 rounded-full bg-rose-950 text-rose-400 border border-rose-800/50 font-medium">IoMT & Simulation</span>
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-800 border border-rose-200 font-semibold">IoMT & Simulation</span>
                 <div class="flex items-center gap-2">
-                  <span><i class="fa-regular fa-star text-yellow-400 mr-1"></i><span class="repo-stars">0</span></span>
-                  <span><i class="fa-solid fa-code-fork text-slate-500 mr-1"></i><span class="repo-forks">0</span></span>
+                  <span><i class="fa-regular fa-star text-amber-500 mr-1"></i><span class="repo-stars">0</span></span>
+                  <span><i class="fa-solid fa-code-fork text-slate-400 mr-1"></i><span class="repo-forks">0</span></span>
                 </div>
               </div>
-              <h3 class="text-base font-bold text-white mb-2 hover:text-sky-400 transition-colors">
+              <h3 class="text-lg font-serif font-bold text-slate-900 mb-2 hover:text-blue-700 transition-colors">
                 <a href="https://github.com/IoannisKtenidis/intelligent-iomt-traffic-management" target="_blank">intelligent-iomt-traffic-management</a>
               </h3>
-              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              <p class="text-slate-600 text-xs leading-[1.65] mb-4">
                 Discrete-event simulation framework and intelligent traffic management for Internet of Medical Things (IoMT) infrastructures.
               </p>
             </div>
             <div>
               <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Simulation</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">IoMT</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Optimization</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Simulation</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">IoMT</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Optimization</span>
               </div>
-              <a href="https://github.com/IoannisKtenidis/intelligent-iomt-traffic-management" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1.5">
+              <a href="https://github.com/IoannisKtenidis/intelligent-iomt-traffic-management" target="_blank" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1.5">
                 View Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </a>
             </div>
           </div>
 
           <!-- Project 8 -->
-          <div class="project-card glass-card rounded-2xl p-6 border border-slate-800 glass-card-hover flex flex-col justify-between" data-category="web-tools" data-repo-name="Task-Automation-Tool">
+          <div class="project-card editorial-card rounded-2xl p-6 border border-slate-200 editorial-card-hover flex flex-col justify-between" data-category="web-tools" data-repo-name="Task-Automation-Tool">
             <div>
-              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span class="px-2.5 py-0.5 rounded-full bg-blue-950 text-blue-400 border border-blue-800/50 font-medium">Automation & Tooling</span>
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-800 border border-blue-200 font-semibold">Automation & Tooling</span>
                 <div class="flex items-center gap-2">
-                  <span><i class="fa-regular fa-star text-yellow-400 mr-1"></i><span class="repo-stars">0</span></span>
-                  <span><i class="fa-solid fa-code-fork text-slate-500 mr-1"></i><span class="repo-forks">0</span></span>
+                  <span><i class="fa-regular fa-star text-amber-500 mr-1"></i><span class="repo-stars">0</span></span>
+                  <span><i class="fa-solid fa-code-fork text-slate-400 mr-1"></i><span class="repo-forks">0</span></span>
                 </div>
               </div>
-              <h3 class="text-base font-bold text-white mb-2 hover:text-sky-400 transition-colors">
+              <h3 class="text-lg font-serif font-bold text-slate-900 mb-2 hover:text-blue-700 transition-colors">
                 <a href="https://github.com/IoannisKtenidis/Task-Automation-Tool" target="_blank">Task-Automation-Tool</a>
               </h3>
-              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              <p class="text-slate-600 text-xs leading-[1.65] mb-4">
                 Python script automating repetitive business workflows and data transformation tasks to boost engineering efficiency.
               </p>
             </div>
             <div>
               <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Python</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Automation</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">CLI</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Python</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Automation</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">CLI</span>
               </div>
-              <a href="https://github.com/IoannisKtenidis/Task-Automation-Tool" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1.5">
+              <a href="https://github.com/IoannisKtenidis/Task-Automation-Tool" target="_blank" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1.5">
                 View Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </a>
             </div>
           </div>
 
           <!-- Project 9 -->
-          <div class="project-card glass-card rounded-2xl p-6 border border-slate-800 glass-card-hover flex flex-col justify-between" data-category="ai-ml" data-repo-name="DataAnalysis-Scripts">
+          <div class="project-card editorial-card rounded-2xl p-6 border border-slate-200 editorial-card-hover flex flex-col justify-between" data-category="ai-ml" data-repo-name="DataAnalysis-Scripts">
             <div>
-              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span class="px-2.5 py-0.5 rounded-full bg-teal-950 text-teal-400 border border-teal-800/50 font-medium">Data Analysis</span>
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-800 border border-teal-200 font-semibold">Data Analysis</span>
                 <div class="flex items-center gap-2">
-                  <span><i class="fa-regular fa-star text-yellow-400 mr-1"></i><span class="repo-stars">0</span></span>
-                  <span><i class="fa-solid fa-code-fork text-slate-500 mr-1"></i><span class="repo-forks">0</span></span>
+                  <span><i class="fa-regular fa-star text-amber-500 mr-1"></i><span class="repo-stars">0</span></span>
+                  <span><i class="fa-solid fa-code-fork text-slate-400 mr-1"></i><span class="repo-forks">0</span></span>
                 </div>
               </div>
-              <h3 class="text-base font-bold text-white mb-2 hover:text-sky-400 transition-colors">
+              <h3 class="text-lg font-serif font-bold text-slate-900 mb-2 hover:text-blue-700 transition-colors">
                 <a href="https://github.com/IoannisKtenidis/DataAnalysis-Scripts" target="_blank">DataAnalysis-Scripts</a>
               </h3>
-              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              <p class="text-slate-600 text-xs leading-[1.65] mb-4">
                 A structured collection of Python scripts for statistical evaluation, exploratory data analysis, and feature engineering.
               </p>
             </div>
             <div>
               <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Pandas</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">NumPy</span>
-                <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300">Matplotlib</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Pandas</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">NumPy</span>
+                <span class="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 text-slate-700">Matplotlib</span>
               </div>
-              <a href="https://github.com/IoannisKtenidis/DataAnalysis-Scripts" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1.5">
+              <a href="https://github.com/IoannisKtenidis/DataAnalysis-Scripts" target="_blank" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1.5">
                 View Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </a>
             </div>
@@ -776,12 +786,12 @@
         </div>
 
         <!-- GitHub Activity Link Banner -->
-        <div class="mt-12 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-sky-950/40 border border-slate-800 flex flex-wrap items-center justify-between gap-4">
+        <div class="mt-12 p-7 rounded-2xl bg-slate-50 border border-slate-200 flex flex-wrap items-center justify-between gap-4 shadow-sm">
           <div>
-            <h4 class="text-white font-bold text-base">Want to see all repositories and activity?</h4>
-            <p class="text-slate-400 text-xs mt-1">Visit my GitHub profile for full commit history, gists, and experimental branches.</p>
+            <h4 class="text-slate-900 font-serif font-bold text-lg">Want to explore all repositories and open-source code?</h4>
+            <p class="text-slate-600 text-xs mt-1">Visit my full GitHub profile for commit history, experimental branches, and utility scripts.</p>
           </div>
-          <a href="https://github.com/IoannisKtenidis?tab=repositories" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-xs flex items-center gap-2 transition-all shadow-md">
+          <a href="https://github.com/IoannisKtenidis?tab=repositories" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-semibold text-xs flex items-center gap-2 transition-all shadow-sm">
             <i class="fa-brands fa-github text-sm"></i> View All Repositories on GitHub
           </a>
         </div>
@@ -791,52 +801,50 @@
     <!-- ========================================================
          EDUCATION SECTION (#education)
          ======================================================== -->
-    <section id="education" class="px-6 lg:px-16 py-24 border-t border-slate-900 bg-slate-900/40">
+    <section id="education" class="px-6 lg:px-16 py-24 bg-[#F8F9FA] border-b border-slate-200">
       <div class="max-w-5xl">
         <div class="mb-12">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Education.</h2>
-          <div class="w-16 h-1 bg-sky-500 mt-2 rounded"></div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">Education.</h2>
+          <div class="w-16 h-1 bg-blue-700 mt-2.5 rounded"></div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           <!-- MSc Degree -->
-          <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover relative overflow-hidden">
-            <div class="absolute -right-4 -top-4 w-24 h-24 bg-sky-500/10 rounded-full blur-xl pointer-events-none"></div>
-            <div class="flex items-center gap-3 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          <div class="editorial-card p-7 rounded-2xl border border-slate-200 editorial-card-hover relative overflow-hidden">
+            <div class="flex items-center gap-2.5 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 font-sans">
               <i class="fa-solid fa-graduation-cap text-base"></i> Master of Science
             </div>
-            <h3 class="text-xl font-bold text-white mb-1">MSc in Artificial Intelligence</h3>
-            <h4 class="text-sm font-medium text-slate-300 mb-3">European University of Cyprus (EUC)</h4>
-            <p class="text-xs text-sky-400 font-medium mb-3">September 2022 – December 2025</p>
-            <p class="text-xs text-slate-400 leading-relaxed">
+            <h3 class="text-xl font-serif font-bold text-slate-900 mb-1">MSc in Artificial Intelligence</h3>
+            <h4 class="text-sm font-semibold text-slate-700 mb-2 font-sans">European University of Cyprus (EUC)</h4>
+            <p class="text-xs text-blue-700 font-medium mb-3">September 2022 – December 2025</p>
+            <p class="text-xs text-slate-600 leading-[1.65]">
               Advanced specialization in machine learning algorithms, deep neural architectures, natural language processing, and scalable AI infrastructure.
             </p>
           </div>
 
           <!-- BSc Degree -->
-          <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover relative overflow-hidden">
-            <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-500/10 rounded-full blur-xl pointer-events-none"></div>
-            <div class="flex items-center gap-3 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          <div class="editorial-card p-7 rounded-2xl border border-slate-200 editorial-card-hover relative overflow-hidden">
+            <div class="flex items-center gap-2.5 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 font-sans">
               <i class="fa-solid fa-graduation-cap text-base"></i> Bachelor of Science
             </div>
-            <h3 class="text-xl font-bold text-white mb-1">BSc in Applied Informatics</h3>
-            <h4 class="text-sm font-medium text-slate-300 mb-3">University of Macedonia (UOM)</h4>
-            <p class="text-xs text-sky-400 font-medium mb-3">September 2015 – December 2021</p>
-            <p class="text-xs text-slate-400 leading-relaxed">
+            <h3 class="text-xl font-serif font-bold text-slate-900 mb-1">BSc in Applied Informatics</h3>
+            <h4 class="text-sm font-semibold text-slate-700 mb-2 font-sans">University of Macedonia (UOM)</h4>
+            <p class="text-xs text-blue-700 font-medium mb-3">September 2015 – December 2021</p>
+            <p class="text-xs text-slate-600 leading-[1.65]">
               Comprehensive curriculum covering software engineering, algorithms, database architectures, networking, operating systems, and computer science fundamentals.
             </p>
           </div>
 
           <!-- Academic Seminar -->
-          <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover md:col-span-2">
-            <div class="flex items-center gap-3 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-2">
+          <div class="editorial-card p-7 rounded-2xl border border-slate-200 editorial-card-hover md:col-span-2">
+            <div class="flex items-center gap-2.5 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 font-sans">
               <i class="fa-solid fa-certificate text-base"></i> Professional Academic Seminar
             </div>
-            <h3 class="text-lg font-bold text-white mb-1">AI and ML for Financial Services Seminar</h3>
-            <h4 class="text-sm font-medium text-slate-300 mb-2">National and Kapodistrian University of Athens (NKUA)</h4>
-            <p class="text-xs text-sky-400 font-medium mb-2">October 2021 – February 2022</p>
-            <p class="text-xs text-slate-400 leading-relaxed">
+            <h3 class="text-xl font-serif font-bold text-slate-900 mb-1">AI and ML for Financial Services Seminar</h3>
+            <h4 class="text-sm font-semibold text-slate-700 mb-2 font-sans">National and Kapodistrian University of Athens (NKUA)</h4>
+            <p class="text-xs text-blue-700 font-medium mb-2">October 2021 – February 2022</p>
+            <p class="text-xs text-slate-600 leading-[1.65]">
               Specialized training in applying machine learning and quantitative data techniques to algorithmic processes, risk assessment, and financial time-series prediction.
             </p>
           </div>
@@ -848,104 +856,104 @@
     <!-- ========================================================
          SKILLS SECTION (#skills)
          ======================================================== -->
-    <section id="skills" class="px-6 lg:px-16 py-24 border-t border-slate-900 bg-slate-950">
+    <section id="skills" class="px-6 lg:px-16 py-24 bg-white border-b border-slate-200">
       <div class="max-w-5xl">
         <div class="mb-12">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Skills & Tech Stack.</h2>
-          <div class="w-16 h-1 bg-sky-500 mt-2 rounded"></div>
-          <p class="text-slate-400 text-sm mt-3">A breakdown of my technical proficiencies, frameworks, and engineering tools.</p>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">Skills & Tech Stack.</h2>
+          <div class="w-16 h-1 bg-blue-700 mt-2.5 rounded"></div>
+          <p class="text-slate-600 text-sm mt-3">A breakdown of my technical proficiencies, frameworks, and engineering tools.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <!-- 1. Programming & Back-End -->
-          <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover">
-            <div class="w-10 h-10 rounded-xl bg-sky-950/80 text-sky-400 flex items-center justify-center mb-4 border border-sky-800/50">
-              <i class="fa-solid fa-terminal text-lg"></i>
+          <div class="editorial-card p-6 rounded-2xl border border-slate-200 editorial-card-hover">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4 border border-blue-200">
+              <i class="fa-solid fa-terminal text-base"></i>
             </div>
-            <h3 class="text-base font-bold text-white mb-3">Programming & Back-End</h3>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li class="flex items-center gap-2"><i class="fa-brands fa-python text-sky-400 w-4"></i> Python (AsyncIO, WebSockets, Flask)</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-server text-sky-400 w-4"></i> BentoML & High-Performance Serving</li>
-              <li class="flex items-center gap-2"><i class="fa-brands fa-golang text-sky-400 w-4"></i> Go (Golang)</li>
-              <li class="flex items-center gap-2"><i class="fa-brands fa-js text-sky-400 w-4"></i> JavaScript (Codecademy Certified)</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-network-wired text-sky-400 w-4"></i> RESTful APIs & Microservices</li>
+            <h3 class="text-base font-serif font-bold text-slate-900 mb-3">Programming & Back-End</h3>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2"><i class="fa-brands fa-python text-blue-700 w-4"></i> Python (AsyncIO, WebSockets, Flask)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-server text-blue-700 w-4"></i> BentoML & High-Performance Serving</li>
+              <li class="flex items-center gap-2"><i class="fa-brands fa-golang text-blue-700 w-4"></i> Go (Golang)</li>
+              <li class="flex items-center gap-2"><i class="fa-brands fa-js text-blue-700 w-4"></i> JavaScript (Codecademy Certified)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-network-wired text-blue-700 w-4"></i> RESTful APIs & Microservices</li>
             </ul>
           </div>
 
           <!-- 2. AI & Machine Learning -->
-          <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover">
-            <div class="w-10 h-10 rounded-xl bg-indigo-950/80 text-indigo-400 flex items-center justify-center mb-4 border border-indigo-800/50">
-              <i class="fa-solid fa-brain text-lg"></i>
+          <div class="editorial-card p-6 rounded-2xl border border-slate-200 editorial-card-hover">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center mb-4 border border-indigo-200">
+              <i class="fa-solid fa-brain text-base"></i>
             </div>
-            <h3 class="text-base font-bold text-white mb-3">AI & Machine Learning</h3>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-fire text-indigo-400 w-4"></i> PyTorch (Deep Learning Certified)</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-chart-line text-indigo-400 w-4"></i> MLflow & MLOps Pipelines</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-network-wired text-indigo-400 w-4"></i> LogBERT & Transformer Models</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-shield-virus text-indigo-400 w-4"></i> Federated Learning</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-user-shield text-indigo-400 w-4"></i> Microsoft Presidio & SpaCy</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-gears text-indigo-400 w-4"></i> Scikit-learn (XGBoost, MLPs)</li>
+            <h3 class="text-base font-serif font-bold text-slate-900 mb-3">AI & Machine Learning</h3>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-fire text-indigo-700 w-4"></i> PyTorch (Deep Learning Certified)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-chart-line text-indigo-700 w-4"></i> MLflow & MLOps Pipelines</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-network-wired text-indigo-700 w-4"></i> LogBERT & Transformer Models</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-shield-virus text-indigo-700 w-4"></i> Federated Learning</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-user-shield text-indigo-700 w-4"></i> Microsoft Presidio & SpaCy</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-gears text-indigo-700 w-4"></i> Scikit-learn (XGBoost, MLPs)</li>
             </ul>
           </div>
 
           <!-- 3. Databases & Optimization -->
-          <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover">
-            <div class="w-10 h-10 rounded-xl bg-emerald-950/80 text-emerald-400 flex items-center justify-center mb-4 border border-emerald-800/50">
-              <i class="fa-solid fa-database text-lg"></i>
+          <div class="editorial-card p-6 rounded-2xl border border-slate-200 editorial-card-hover">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 border border-emerald-200">
+              <i class="fa-solid fa-database text-base"></i>
             </div>
-            <h3 class="text-base font-bold text-white mb-3">Databases & Optimization</h3>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-table text-emerald-400 w-4"></i> SQL (MySQL, MariaDB)</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-code text-emerald-400 w-4"></i> PL/SQL Programming</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-sitemap text-emerald-400 w-4"></i> Relational Schema Design</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-emerald-400 w-4"></i> Query & Index Optimization</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-wrench text-emerald-400 w-4"></i> Database Troubleshooting</li>
+            <h3 class="text-base font-serif font-bold text-slate-900 mb-3">Databases & Optimization</h3>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-table text-emerald-700 w-4"></i> SQL (MySQL, MariaDB)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-code text-emerald-700 w-4"></i> PL/SQL Programming</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-sitemap text-emerald-700 w-4"></i> Relational Schema Design</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-bolt text-emerald-700 w-4"></i> Query & Index Optimization</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-wrench text-emerald-700 w-4"></i> Database Troubleshooting</li>
             </ul>
           </div>
 
           <!-- 4. DevOps & Cloud -->
-          <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover">
-            <div class="w-10 h-10 rounded-xl bg-purple-950/80 text-purple-400 flex items-center justify-center mb-4 border border-purple-800/50">
-              <i class="fa-solid fa-cloud-arrow-up text-lg"></i>
+          <div class="editorial-card p-6 rounded-2xl border border-slate-200 editorial-card-hover">
+            <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-4 border border-purple-200">
+              <i class="fa-solid fa-cloud-arrow-up text-base"></i>
             </div>
-            <h3 class="text-base font-bold text-white mb-3">DevOps & CI/CD</h3>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li class="flex items-center gap-2"><i class="fa-brands fa-docker text-purple-400 w-4"></i> Docker & Docker Compose</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-dharmachakra text-purple-400 w-4"></i> Kubernetes Orchestration</li>
-              <li class="flex items-center gap-2"><i class="fa-brands fa-git-alt text-purple-400 w-4"></i> Git & GitHub / GitLab CI/CD</li>
-              <li class="flex items-center gap-2"><i class="fa-brands fa-linux text-purple-400 w-4"></i> Linux Environment & Shell</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-purple-400 w-4"></i> Honeypots & IDS Deployment</li>
+            <h3 class="text-base font-serif font-bold text-slate-900 mb-3">DevOps & CI/CD</h3>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2"><i class="fa-brands fa-docker text-purple-700 w-4"></i> Docker & Docker Compose</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-dharmachakra text-purple-700 w-4"></i> Kubernetes Orchestration</li>
+              <li class="flex items-center gap-2"><i class="fa-brands fa-git-alt text-purple-700 w-4"></i> Git & GitHub / GitLab CI/CD</li>
+              <li class="flex items-center gap-2"><i class="fa-brands fa-linux text-purple-700 w-4"></i> Linux Environment & Shell</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-purple-700 w-4"></i> Honeypots & IDS Deployment</li>
             </ul>
           </div>
 
           <!-- 5. Web Technologies -->
-          <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover">
-            <div class="w-10 h-10 rounded-xl bg-cyan-950/80 text-cyan-400 flex items-center justify-center mb-4 border border-cyan-800/50">
-              <i class="fa-solid fa-globe text-lg"></i>
+          <div class="editorial-card p-6 rounded-2xl border border-slate-200 editorial-card-hover">
+            <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-800 flex items-center justify-center mb-4 border border-cyan-200">
+              <i class="fa-solid fa-globe text-base"></i>
             </div>
-            <h3 class="text-base font-bold text-white mb-3">Web Technologies</h3>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li class="flex items-center gap-2"><i class="fa-brands fa-html5 text-cyan-400 w-4"></i> HTML5 & Semantic Web</li>
-              <li class="flex items-center gap-2"><i class="fa-brands fa-css3-alt text-cyan-400 w-4"></i> CSS3 & Tailwind CSS</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-mobile-screen text-cyan-400 w-4"></i> Responsive & Mobile-First Design</li>
-              <li class="flex items-center gap-2"><i class="fa-brands fa-wordpress text-cyan-400 w-4"></i> WordPress Theme & Maintenance</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-palette text-cyan-400 w-4"></i> Adobe Creative Suite</li>
+            <h3 class="text-base font-serif font-bold text-slate-900 mb-3">Web Technologies</h3>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2"><i class="fa-brands fa-html5 text-cyan-800 w-4"></i> HTML5 & Semantic Web</li>
+              <li class="flex items-center gap-2"><i class="fa-brands fa-css3-alt text-cyan-800 w-4"></i> CSS3 & Tailwind CSS</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-mobile-screen text-cyan-800 w-4"></i> Responsive & Mobile-First Design</li>
+              <li class="flex items-center gap-2"><i class="fa-brands fa-wordpress text-cyan-800 w-4"></i> WordPress Theme & Maintenance</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-palette text-cyan-800 w-4"></i> Adobe Creative Suite</li>
             </ul>
           </div>
 
           <!-- 6. Professional Certifications -->
-          <div class="glass-card p-6 rounded-2xl border border-slate-800 glass-card-hover">
-            <div class="w-10 h-10 rounded-xl bg-amber-950/80 text-amber-400 flex items-center justify-center mb-4 border border-amber-800/50">
-              <i class="fa-solid fa-award text-lg"></i>
+          <div class="editorial-card p-6 rounded-2xl border border-slate-200 editorial-card-hover">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-800 flex items-center justify-center mb-4 border border-amber-200">
+              <i class="fa-solid fa-award text-base"></i>
             </div>
-            <h3 class="text-base font-bold text-white mb-3">Certifications</h3>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-amber-400 w-4"></i> Codecademy: JavaScript, HTML, CSS</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-amber-400 w-4"></i> Codecademy: PyTorch Deep Learning</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-amber-400 w-4"></i> AI/ML Specialist (NKUA)</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-amber-400 w-4"></i> AI & Quantum Computing (Udemy)</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-amber-400 w-4"></i> English C2 Mastery (LanguageCert)</li>
+            <h3 class="text-base font-serif font-bold text-slate-900 mb-3">Certifications</h3>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-amber-600 w-4"></i> Codecademy: JavaScript, HTML, CSS</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-amber-600 w-4"></i> Codecademy: PyTorch Deep Learning</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-amber-600 w-4"></i> AI/ML Specialist (NKUA)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-amber-600 w-4"></i> AI & Quantum Computing (Udemy)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-amber-600 w-4"></i> English C2 Mastery (LanguageCert)</li>
             </ul>
           </div>
 
@@ -956,69 +964,69 @@
     <!-- ========================================================
          CONTACT SECTION (#contact)
          ======================================================== -->
-    <section id="contact" class="px-6 lg:px-16 py-24 border-t border-slate-900 bg-slate-900/40">
+    <section id="contact" class="px-6 lg:px-16 py-24 bg-[#F8F9FA]">
       <div class="max-w-4xl">
         <div class="mb-12">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Contact.</h2>
-          <div class="w-16 h-1 bg-sky-500 mt-2 rounded"></div>
-          <p class="text-slate-400 text-sm mt-3">Feel free to reach out for research collaboration, software engineering projects, or technical consulting.</p>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">Contact.</h2>
+          <div class="w-16 h-1 bg-blue-700 mt-2.5 rounded"></div>
+          <p class="text-slate-600 text-sm mt-3">Feel free to reach out for research collaboration, software engineering projects, or technical consulting.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           
           <!-- Contact Direct Details -->
-          <div class="space-y-4">
-            <a href="mailto:joktenis2@gmail.com" class="p-4 rounded-2xl glass-card border border-slate-800 flex items-center gap-4 hover:border-sky-500/50 transition-all group">
-              <div class="w-12 h-12 rounded-xl bg-sky-950/80 text-sky-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+          <div class="space-y-3.5">
+            <a href="mailto:joktenis2@gmail.com" class="p-4 rounded-2xl editorial-card border border-slate-200 flex items-center gap-4 hover:border-blue-700 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center group-hover:scale-105 transition-transform">
                 <i class="fa-solid fa-envelope text-xl"></i>
               </div>
               <div>
-                <div class="text-xs text-slate-400">Email Me At</div>
-                <div class="text-sm font-bold text-white group-hover:text-sky-400 transition-colors">joktenis2@gmail.com</div>
+                <div class="text-xs text-slate-500 font-medium">Email Me At</div>
+                <div class="text-sm font-bold text-slate-900 group-hover:text-blue-700 transition-colors">joktenis2@gmail.com</div>
               </div>
             </a>
 
-            <a href="tel:+306986776234" class="p-4 rounded-2xl glass-card border border-slate-800 flex items-center gap-4 hover:border-sky-500/50 transition-all group">
-              <div class="w-12 h-12 rounded-xl bg-slate-800 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <a href="tel:+306986776234" class="p-4 rounded-2xl editorial-card border border-slate-200 flex items-center gap-4 hover:border-blue-700 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center group-hover:scale-105 transition-transform">
                 <i class="fa-solid fa-phone text-xl"></i>
               </div>
               <div>
-                <div class="text-xs text-slate-400">Mobile Phone</div>
-                <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">(+30) 6986776234</div>
+                <div class="text-xs text-slate-500 font-medium">Mobile Phone</div>
+                <div class="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">(+30) 6986776234</div>
               </div>
             </a>
 
-            <a href="https://www.linkedin.com/in/ioannis-ktenidis/" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl glass-card border border-slate-800 flex items-center gap-4 hover:border-sky-500/50 transition-all group">
-              <div class="w-12 h-12 rounded-xl bg-blue-950/80 text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <a href="https://www.linkedin.com/in/ioannis-ktenidis/" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl editorial-card border border-slate-200 flex items-center gap-4 hover:border-blue-700 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-800 flex items-center justify-center group-hover:scale-105 transition-transform">
                 <i class="fa-brands fa-linkedin-in text-xl"></i>
               </div>
               <div>
-                <div class="text-xs text-slate-400">Connect on LinkedIn</div>
-                <div class="text-sm font-bold text-white group-hover:text-sky-400 transition-colors">linkedin.com/in/ioannis-ktenidis</div>
+                <div class="text-xs text-slate-500 font-medium">Connect on LinkedIn</div>
+                <div class="text-sm font-bold text-slate-900 group-hover:text-blue-700 transition-colors">linkedin.com/in/ioannis-ktenidis</div>
               </div>
             </a>
 
-            <a href="https://github.com/IoannisKtenidis" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl glass-card border border-slate-800 flex items-center gap-4 hover:border-sky-500/50 transition-all group">
-              <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-200 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <a href="https://github.com/IoannisKtenidis" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl editorial-card border border-slate-200 flex items-center gap-4 hover:border-blue-700 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-900 flex items-center justify-center group-hover:scale-105 transition-transform">
                 <i class="fa-brands fa-github text-xl"></i>
               </div>
               <div>
-                <div class="text-xs text-slate-400">Follow on GitHub</div>
-                <div class="text-sm font-bold text-white group-hover:text-sky-400 transition-colors">github.com/IoannisKtenidis</div>
+                <div class="text-xs text-slate-500 font-medium">Follow on GitHub</div>
+                <div class="text-sm font-bold text-slate-900 group-hover:text-blue-700 transition-colors">github.com/IoannisKtenidis</div>
               </div>
             </a>
           </div>
 
           <!-- Send Message Card -->
-          <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 text-center">
-            <div class="w-16 h-16 rounded-full bg-sky-500/10 text-sky-400 flex items-center justify-center mx-auto mb-4 border border-sky-500/20">
+          <div class="editorial-card p-6 sm:p-8 rounded-2xl border border-slate-200 text-center shadow-sm">
+            <div class="w-16 h-16 rounded-full bg-blue-50 text-blue-700 flex items-center justify-center mx-auto mb-4 border border-blue-200">
               <i class="fa-solid fa-paper-plane text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Let's Collaborate</h3>
-            <p class="text-xs text-slate-400 leading-relaxed mb-6">
-              Looking for software development, research collaboration, or AI/ML solutions? Send me a direct email and I'll get back to you promptly.
+            <h3 class="text-2xl font-serif font-bold text-slate-900 mb-2">Let's Collaborate</h3>
+            <p class="text-xs text-slate-600 leading-[1.65] mb-6">
+              Looking for software development, research collaboration, or AI/ML solutions? Send me a direct email message and I'll get back to you promptly.
             </p>
-            <a href="mailto:joktenis2@gmail.com?subject=Inquiry%20via%20Portfolio%20Website&body=Hello%20Ioannis,%0D%0A%0D%0AI%20came%20across%20your%20portfolio..." class="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition-all shadow-lg shadow-sky-600/30">
+            <a href="mailto:joktenis2@gmail.com?subject=Inquiry%20via%20Portfolio%20Website&body=Hello%20Ioannis,%0D%0A%0D%0AI%20came%20across%20your%20portfolio..." class="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm transition-all shadow-sm">
               <i class="fa-solid fa-envelope"></i> Send an Email Message
             </a>
           </div>
@@ -1030,12 +1038,12 @@
     <!-- ========================================================
          SITE FOOTER
          ======================================================== -->
-    <footer class="px-6 lg:px-16 py-8 border-t border-slate-900 bg-slate-950 text-xs text-slate-500 flex flex-wrap items-center justify-between gap-4">
+    <footer class="px-6 lg:px-16 py-8 border-t border-slate-200 bg-white text-xs text-slate-500 flex flex-wrap items-center justify-between gap-4">
       <div>
-        Designed & Built by <span class="text-slate-300 font-medium">Ioannis Ktenidis</span>. Hosted on <strong>GitHub Pages</strong>.
+        Designed & Built by <span class="text-slate-900 font-medium">Ioannis Ktenidis</span>. Hosted on <strong>GitHub Pages</strong>.
       </div>
       <div class="flex items-center gap-4">
-        <a href="#home" class="hover:text-sky-400 transition-colors">Back to top <i class="fa-solid fa-arrow-up ml-1"></i></a>
+        <a href="#home" class="hover:text-blue-700 transition-colors">Back to top <i class="fa-solid fa-arrow-up ml-1"></i></a>
       </div>
     </footer>
 
